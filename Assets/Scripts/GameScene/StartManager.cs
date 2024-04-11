@@ -30,7 +30,7 @@ public class StartManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             startGame = true;
-            UEGameStart.Invoke();
+            UEGameStart.Invoke(); // Trigger public game start event.
         }
 
         if (startGame && !gameStarted)

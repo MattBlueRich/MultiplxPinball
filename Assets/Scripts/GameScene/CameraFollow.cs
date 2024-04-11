@@ -15,14 +15,21 @@ public class CameraFollow : MonoBehaviour
 
     [SerializeField] private Transform target; // This is what the camera follows in the game scene.
 
+    private bool trackTarget = true;
+
     void FixedUpdate()
     {
         // If the camera's y-position is more than the minimum y-value...
-        if(transform.position.y > minY)
+        if(transform.position.y > minY && trackTarget)
         {
             Vector3 targetPosition = new Vector3(transform.position.x, target.position.y, -10f); // The offset refers to the 2D camera's required -10 z-axis.
             // Move camera to target position, from current position, smoothly by smoothTime.
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
         }       
+    }
+
+    public void StopTracking()
+    {
+        trackTarget = false;
     }
 }

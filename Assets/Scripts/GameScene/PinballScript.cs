@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PinballScript : MonoBehaviour
 {
@@ -8,6 +9,14 @@ public class PinballScript : MonoBehaviour
     private Animator animator;
     private int verticalHash;
     private Rigidbody2D rb;
+
+    [Header("Pinball Game Over")]
+    public float deathHeight = -13f;
+    public AudioClip deathSFX;
+    public UnityEvent UEOutGameOver;
+
+    private AudioSource audioSource;
+    private bool gameOver = false;
 
     void Start()
     {
@@ -17,6 +26,7 @@ public class PinballScript : MonoBehaviour
         // Get access to components:
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -30,5 +40,13 @@ public class PinballScript : MonoBehaviour
         animator.SetFloat(verticalHash, pinballYVelocity);
         #endregion
 
+        if(transform.position.y <= deathHeight && !gameOver)
+        {
+            gameOver = true;
+
+            UEOutGameOver.Invoke(); // Trigger public game over event.
+
+            audioSource.PlayOneShot(deathSFX);
+        }
     }
 }
