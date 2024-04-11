@@ -9,14 +9,7 @@ public class StationAnimation : MonoBehaviour
     public Vector3 minY;
     public float slowness = 1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position = Vector3.Lerp(maxY, minY, Mathf.PingPong(Time.time / slowness, 1));
     }
