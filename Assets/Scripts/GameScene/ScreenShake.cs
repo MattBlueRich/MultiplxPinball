@@ -15,27 +15,30 @@ public class ScreenShake : MonoBehaviour
 
     void Update()
     {
-        // When "start" is true, run the Shaking function once.
+        // When "start" is true, run the Shaking function once ("ScreenShake.start = true").
         if (start)
         {
             start = false;
             StartCoroutine(Shaking());
         }
 
+        // Bugfix: I added this if-statement to fix the issue where the camera fails to reset its x-axis back to zero!
         if (returning)
         {
             Vector3 targetPos = new Vector3(0, transform.position.y, -10f);
 
+            // If the x-axis is not equal to zero...
             if(transform.position != targetPos)
             {
+                // Smoothly move the camera's x-position towards zero.
                 transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, 0.15f);
             }
+            // If the x-axis has been reset to zero...
             else
             {
-                transform.position = targetPos;
-                returning = false;
+                transform.position = targetPos; // This resets the position fully to zero.
+                returning = false; // The camera is no longer off-center, and this if-statement no longer needs to be called.
             }
-            
         }
     }
     IEnumerator Shaking()
@@ -52,7 +55,6 @@ public class ScreenShake : MonoBehaviour
             yield return null;
         }
 
-        returning = true;
-    
+        returning = true; // Start moving the camera's x-position back to zero in Update().
     }
 }
