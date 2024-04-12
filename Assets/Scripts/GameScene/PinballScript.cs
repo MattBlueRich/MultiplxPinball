@@ -13,6 +13,7 @@ public class PinballScript : MonoBehaviour
     [Header("Pinball Game Over")]
     public float deathHeight = -13f;
     public AudioClip deathSFX;
+
     public UnityEvent UEOutGameOver;
 
     private AudioSource audioSource;

@@ -12,10 +12,15 @@ public class NudgeFunction : MonoBehaviour
     private Rigidbody2D rb; // This is the pinball's RigidBody, which we will use for applying force.
     private bool canUse = false; // This bool, if true, allows the nudge ability to be used.
 
+    public AudioClip nudgeSFX;
+    AudioSource audioSource;
+
     private void Start()
     {
         currentCooldownTime = cooldownMaxDuration;
+        
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,5 +56,10 @@ public class NudgeFunction : MonoBehaviour
     {
         rb.AddForce(dir * nudgeForce); // Add force in direction of input.
         ScreenShake.start = true; // This shakes the screen!
+
+        // This plays the nudge sound effect:
+        audioSource.clip = nudgeSFX;
+        audioSource.pitch = Random.Range(0.5f, 1f); // This makes each sound feel more distinct!
+        audioSource.Play();
     }
 }
