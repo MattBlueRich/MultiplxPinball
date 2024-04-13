@@ -2243,7 +2243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownMaxDuration: 5
-  nudgeForce: 15000
+  nudgeForce: 10000
   currentCooldownTime: 0
   nudgeSFX: {fileID: 8300000, guid: 9e05a64fb3c3f4d4eaf8e39f1257af0f, type: 3}
 --- !u!1 &2087421043
@@ -2258,12 +2258,12 @@ GameObject:
   - component: {fileID: 2087421045}
   - component: {fileID: 2087421044}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Test Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &2087421044
 BoxCollider2D:
   m_ObjectHideFlags: 0
