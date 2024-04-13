@@ -45,7 +45,7 @@ public class NudgeFunction : MonoBehaviour
             if (currentCooldownTime < 0)
             {
                 canUse = true; // Enable ability to use nudge ability!
-                currentCooldownTime = cooldownMaxDuration; // Reset the cooldown timer.
+                currentCooldownTime = 0; // Lock cooldown time.
             }
         }
 
@@ -61,5 +61,6 @@ public class NudgeFunction : MonoBehaviour
         audioSource.clip = nudgeSFX;
         audioSource.pitch = Random.Range(0.5f, 1f); // This makes each sound feel more distinct!
         audioSource.Play();
+        currentCooldownTime = cooldownMaxDuration; // Reset the cooldown timer.
     }
 }
