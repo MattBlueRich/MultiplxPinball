@@ -15,6 +15,8 @@ public class NudgeFunction : MonoBehaviour
     public AudioClip nudgeSFX;
     AudioSource audioSource;
 
+    bool cooldownReset = false;
+
     private void Start()
     {
         currentCooldownTime = cooldownMaxDuration;
@@ -49,6 +51,24 @@ public class NudgeFunction : MonoBehaviour
             }
         }
 
+        // If the cooldown needs to be reset after use...
+        if (cooldownReset)
+        {
+            // If the cooldown is still less than the max cooldown time...
+            if(currentCooldownTime < cooldownMaxDuration) 
+            {
+                // Gradually increase current cooldown time to match max cooldown time.
+                currentCooldownTime += Time.deltaTime * 5f;
+            }
+            // Else if the cooldown has been reset...
+            else
+            {
+                // Set time exactly to max cooldown time.
+                currentCooldownTime = cooldownMaxDuration;
+                cooldownReset = false; // Stop updating for reseting the cooldown.
+            }
+        }
+
     }
 
     // This function pushes the ball in the desired input direction.
@@ -61,6 +81,7 @@ public class NudgeFunction : MonoBehaviour
         audioSource.clip = nudgeSFX;
         audioSource.pitch = Random.Range(0.5f, 1f); // This makes each sound feel more distinct!
         audioSource.Play();
-        currentCooldownTime = cooldownMaxDuration; // Reset the cooldown timer.
+        
+        cooldownReset = true; // This increases the current cooldown time back to max cooldown time, over time.
     }
 }
