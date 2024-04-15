@@ -778,9 +778,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d3db0951a00ba47909fa740747a7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheel: {fileID: 1723744149}
   numberOfSegments: 12
-  rotationTime: 0
-  numberCircleRotate: 0
+  rotationTime: 5
+  fullWheelRotations: 4
+  speedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0.028526505
+      outSlope: -0.028526505
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.16535433
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isLucky: 0
 --- !u!95 &694984060
 Animator:
   serializedVersion: 5
