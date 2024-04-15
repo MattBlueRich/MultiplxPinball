@@ -16,6 +16,11 @@ public class WheelUI : MonoBehaviour
     public int fullWheelRotations = 4;
     public AnimationCurve speedCurve;
 
+    [Header("Sound Effects & Music")]
+    public AudioClip wheelTickSFX;
+    public AudioClip wheelMusic;
+    public AudioSource managerAudioSource;
+
     [Header("Wheel Fate")]
     public bool isLucky;
 
@@ -23,17 +28,24 @@ public class WheelUI : MonoBehaviour
     private float angleOfOneSegment;
     private float currentTime;
 
+    AudioSource audioSource;
     Animator animator;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+
         angleOfOneSegment = CIRCLE / numberOfSegments;
-        StartWheel();
     }
+
+    [ContextMenu("Start Wheel")] // By right-clicking this script, this function can be called in the editor.
     public void StartWheel()
     {
-        animator.SetBool("In", true); 
+        animator.SetBool("In", true);
+        managerAudioSource.Pause(); // This will pause the current gameplay music.
+        audioSource.clip = wheelMusic;
+        audioSource.Play();
         StartCoroutine(RotateWheel());
     }
     IEnumerator RotateWheel()
