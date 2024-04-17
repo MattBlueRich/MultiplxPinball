@@ -1329,6 +1329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086631122}
   - component: {fileID: 1086631121}
+  - component: {fileID: 1086631123}
   m_Layer: 0
   m_Name: Music Manager
   m_TagString: Untagged
@@ -1447,6 +1448,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!169 &1086631123
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086631120}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.01891769
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1502166435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,6 +1961,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  usingGate: 0
+  managerLowPassFilter: {fileID: 0}
+  tilemapFocus: {fileID: 0}
 --- !u!82 &2039358131
 AudioSource:
   m_ObjectHideFlags: 0
