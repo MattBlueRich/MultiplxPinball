@@ -26,6 +26,12 @@ public class PinballScript : MonoBehaviour
     private Vector2 gateEndForce;
     private CircleCollider2D circleCollider;
 
+    [Header("Music Manager Effects")]
+    public AudioLowPassFilter managerLowPassFilter;
+
+    [Header("Other")]
+    public TilemapFocus tilemapFocus;
+
     void Start()
     {
         // StringToHash() saves memory on the Animator's parameters.
@@ -36,6 +42,9 @@ public class PinballScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         circleCollider = GetComponent<CircleCollider2D>();
+
+        // Reset music effects.
+        managerLowPassFilter.enabled = false;
     }
 
     void Update()
@@ -96,6 +105,12 @@ public class PinballScript : MonoBehaviour
 
                 // Throw the ball from the gate's exit.
                 rb.AddForce(gateEndForce * gateSpeed, ForceMode2D.Impulse);
+
+                // Focus tilemap
+                tilemapFocus.Focus();
+
+                // Unmuffle music.
+                managerLowPassFilter.enabled = false;
             }
         }
         #endregion
@@ -115,6 +130,12 @@ public class PinballScript : MonoBehaviour
         nextPoint = 0;
         circleCollider.enabled = false;
 
+        // Unfocus tilemap.
+        tilemapFocus.Unfocus();
+
+        // Muffle music.
+        managerLowPassFilter.enabled = true;
+
         // Start gate movement.
         usingGate = true;
     }
@@ -126,6 +147,12 @@ public class PinballScript : MonoBehaviour
         nextPoint = 0;
         rb.gravityScale = 1;
         circleCollider.enabled = true;
+        
+        // Focus tilemap
+        tilemapFocus.Focus();
+
+        // Unmuffle music.
+        managerLowPassFilter.enabled = false;
     }
 
 }

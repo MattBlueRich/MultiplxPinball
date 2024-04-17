@@ -171,10 +171,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 900507836300609619, guid: 38ce78b49d8fded4c9a7668087146bf9, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6514681569788432065, guid: 38ce78b49d8fded4c9a7668087146bf9, type: 3}
       propertyPath: m_Name
       value: Empty Level Template 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7076261074879211556, guid: 38ce78b49d8fded4c9a7668087146bf9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 19d2cdafd0952c443868d2f8ca18d2e7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -361,6 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486556610}
   - component: {fileID: 486556609}
+  - component: {fileID: 486556611}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -396,6 +405,21 @@ Transform:
   - {fileID: 69570322}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486556611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486556608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ad410fcdb88442aed459252f993c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemapMaterial: {fileID: 2100000, guid: 19d2cdafd0952c443868d2f8ca18d2e7, type: 2}
+  focusSpeed: 10
+  unfocusTransparency: 0.05
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1075,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 203c794240c32c8418ec1fd28de25719, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1386,6 +1410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086631122}
   - component: {fileID: 1086631121}
+  - component: {fileID: 1086631123}
   m_Layer: 0
   m_Name: Music Manager
   m_TagString: Untagged
@@ -1504,6 +1529,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!169 &1086631123
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086631120}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.01891769
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1502166435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2043,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   usingGate: 0
+  managerLowPassFilter: {fileID: 1086631123}
+  tilemapFocus: {fileID: 486556611}
 --- !u!82 &2039358131
 AudioSource:
   m_ObjectHideFlags: 0
