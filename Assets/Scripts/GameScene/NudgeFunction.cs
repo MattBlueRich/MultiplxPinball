@@ -17,12 +17,14 @@ public class NudgeFunction : MonoBehaviour
 
     bool cooldownReset = false;
 
+    PinballScript pinballScript;
     private void Start()
     {
         currentCooldownTime = cooldownMaxDuration;
         
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
+        pinballScript = GetComponent<PinballScript>();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class NudgeFunction : MonoBehaviour
         if(inputDir != Vector2.zero && canUse)
         {
             canUse = false; // Disable ability, enabling a cooldown.
+            pinballScript.ExitGateMovement(); // If the ball is currently riding a gate, exit the gate!
             UseNudge(inputDir); // Nudge the pinball in the input direction.
         }
         
