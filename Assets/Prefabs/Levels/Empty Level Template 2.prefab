@@ -1291,10 +1291,10 @@ GameObject:
   - component: {fileID: 900507836300609619}
   - component: {fileID: 7076261074879211556}
   - component: {fileID: 5722702503444784117}
-  - component: {fileID: 7231810010218242542}
-  - component: {fileID: -3240125211429233347}
+  - component: {fileID: 4140486097753832891}
+  - component: {fileID: 8501936093274914621}
   m_Layer: 0
-  m_Name: Empty Level Template 1
+  m_Name: Empty Level Template 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2931,7 +2931,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &7231810010218242542
+--- !u!114 &4140486097753832891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2943,7 +2943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72631fbd9518a0c42a4de0ba9f561d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &-3240125211429233347
+--- !u!50 &8501936093274914621
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
