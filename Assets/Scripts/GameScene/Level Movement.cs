@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelMovement : MonoBehaviour
-{   //Sets int for level y position
-    int levelY = 0;
+{   //Sets int for level movement speed
+    public static float LevelSpeed = 0f;
     
     // Start is called before the first frame update
     void Start()
@@ -16,8 +16,8 @@ public class LevelMovement : MonoBehaviour
     void Update()
     {   
         //Drops level down through view
-        transform.position += new Vector3(0, -1.0f * Time.deltaTime, 0);
-        levelY = levelY - 1;
+        transform.position += new Vector3(0, -LevelSpeed * Time.deltaTime, 0);
+        
        
     }
 }

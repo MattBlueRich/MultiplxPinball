@@ -30,6 +30,7 @@ public class StartManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !startGame)
         {
             startGame = true;
+            LevelMovement.LevelSpeed = 1.0f;
             UEGameStart.Invoke(); // Trigger public game start event.
         }
 
