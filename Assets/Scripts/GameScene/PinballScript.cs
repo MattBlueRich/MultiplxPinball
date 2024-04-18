@@ -154,5 +154,5 @@ public class PinballScript : MonoBehaviour
         // Unmuffle music.
         managerLowPassFilter.enabled = false;
     }
-
 }
+

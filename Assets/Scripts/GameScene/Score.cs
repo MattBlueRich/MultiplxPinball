@@ -10,8 +10,6 @@ public class Score : MonoBehaviour
     private void Start()
     {
         score = 0; // Subject to change with a lives system.
-
-        //AddScore(500);
     }
 
     public void AddScore(int scoreValue)
