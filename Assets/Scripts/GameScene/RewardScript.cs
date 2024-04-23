@@ -5,7 +5,11 @@ using UnityEngine;
 public class RewardScript : MonoBehaviour
 {
     private Score score;
+    [Header("Value")]
     public int scoreValue;
+    [Header("Target Types")]
+    public bool isSuddenSpecial = false;
+    private bool disabled = false;
 
     private void Start()
     {
@@ -15,11 +19,42 @@ public class RewardScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Pinball"))
+        if (collision.gameObject.CompareTag("Pinball") && !disabled)
         {
             score.AddScore(scoreValue);
-            Destroy(this.gameObject);
 
+            if (isSuddenSpecial)
+            {
+                transform.parent.GetComponent<SuddenSpecial>().NextTarget();
+            }
+
+            KillTarget();
         }
     }
+
+    // This function disables and hides the target.
+    public void KillTarget()
+    {
+        disabled = true;
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        // Here we can add some kind of death animation, with a cloud particle effect.
+    }
+    
+    /* This function is called by the SuddenSpecial.cs, which is a empty parent of Sudden Special Targets.
+     * When activated, the target can be collided and points can be scored. 
+     * When unactivated, the target can't be collided with and has to wait till activated by SuddenSpecial.cs. */
+    public void Activate(bool state)
+    {
+        if (state) 
+        {
+            disabled = false;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+        else
+        {
+            disabled = true;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+    }
+
 }
