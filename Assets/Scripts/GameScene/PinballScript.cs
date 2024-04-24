@@ -25,6 +25,7 @@ public class PinballScript : MonoBehaviour
     private float gateSpeed;
     private Vector2 gateEndForce;
     private CircleCollider2D circleCollider;
+    private float tempLevelSpeed;
 
     [Header("Music Manager Effects")]
     public AudioLowPassFilter managerLowPassFilter;
@@ -106,11 +107,14 @@ public class PinballScript : MonoBehaviour
                 // Throw the ball from the gate's exit.
                 rb.AddForce(gateEndForce * gateSpeed, ForceMode2D.Impulse);
 
-                // Focus tilemap
+                // Focus tilemap.
                 tilemapFocus.Focus();
 
                 // Unmuffle music.
                 managerLowPassFilter.enabled = false;
+
+                // Return Level Movement.
+                LevelMovement.LevelSpeed = tempLevelSpeed;
             }
         }
         #endregion
@@ -120,6 +124,7 @@ public class PinballScript : MonoBehaviour
     public void UseGateMovement(Transform[] waypoints, float speed, Vector2 endForce)
     {
         // Get variables.
+        tempLevelSpeed = LevelMovement.LevelSpeed;
         gateWaypoints = waypoints;
         gateSpeed = speed;
         gateEndForce = endForce;
@@ -129,6 +134,9 @@ public class PinballScript : MonoBehaviour
         rb.gravityScale = 0;
         nextPoint = 0;
         circleCollider.enabled = false;
+
+        // Bug fix: Stop all level movement.
+        LevelMovement.LevelSpeed = 0f;
 
         // Unfocus tilemap.
         tilemapFocus.Unfocus();
@@ -153,6 +161,9 @@ public class PinballScript : MonoBehaviour
 
         // Unmuffle music.
         managerLowPassFilter.enabled = false;
+
+        // Return Level Movement.
+        LevelMovement.LevelSpeed = tempLevelSpeed;
     }
 
 }
