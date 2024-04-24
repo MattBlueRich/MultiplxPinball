@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 600058012407538436}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.75, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -218,7 +218,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.98468786, y: -0.071716435}
-  m_ConnectedAnchor: {x: -3.3127391, y: -4.7113504}
+  m_ConnectedAnchor: {x: -3.0627391, y: -4.7113504}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -321,6 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1623111880001098568}
   - component: {fileID: 4017408187772534980}
+  - component: {fileID: 2566825629660512458}
   m_Layer: 0
   m_Name: Ramp
   m_TagString: Untagged
@@ -395,6 +396,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &2566825629660512458
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811019531496538696}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.258, y: 1.4398403}
+      - {x: -2.2513154, y: -0.4438634}
+      - {x: 0.51336884, y: -0.5040231}
+      - {x: 0.5, y: 0.6209922}
+      - {x: -0.23863506, y: 1.3729963}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1993096813372858000
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6932958857418205762}
   - component: {fileID: 7966021015546611575}
+  - component: {fileID: 7912798556912093498}
   m_Layer: 0
   m_Name: Ramp
   m_TagString: Untagged
@@ -479,6 +531,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &7912798556912093498
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993096813372858000}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.237833, y: 1.4242933}
+      - {x: -2.271368, y: -0.49733877}
+      - {x: 0.5, y: -0.5040231}
+      - {x: 0.5122423, y: 0.61791325}
+      - {x: -0.523999, y: 1.4226787}
+  m_UseDelaunayMesh: 0
 --- !u!1 &2253155353640934343
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +775,7 @@ Transform:
   m_GameObject: {fileID: 6883769420159022902}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1033,7 +1135,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.98468786, y: -0.071716435}
-  m_ConnectedAnchor: {x: 3.922739, y: -4.7388506}
+  m_ConnectedAnchor: {x: 3.172739, y: -4.7388506}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
