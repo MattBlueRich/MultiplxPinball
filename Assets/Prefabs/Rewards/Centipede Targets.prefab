@@ -398,6 +398,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   isSuddenSpecial: 1
+  isDropTarget: 0
+  moleMin: 2
+  moleMax: 5
 --- !u!58 &5383585675505275526
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -639,6 +642,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   isSuddenSpecial: 1
+  isDropTarget: 0
+  moleMin: 2
+  moleMax: 5
 --- !u!58 &6100283058947097575
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -964,6 +970,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   isSuddenSpecial: 1
+  isDropTarget: 0
+  moleMin: 2
+  moleMax: 5
 --- !u!58 &8941708906064434078
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1099,6 +1108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   isSuddenSpecial: 1
+  isDropTarget: 0
+  moleMin: 2
+  moleMax: 5
 --- !u!58 &2983799041353118394
 CircleCollider2D:
   m_ObjectHideFlags: 0
