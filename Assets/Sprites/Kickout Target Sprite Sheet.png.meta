@@ -1,0 +1,721 @@
+fileFormatVersion: 2
+guid: d2f1b413255d8ef45adf888763945340
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 154
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a73f021f2a23d4fb89b30f928628aa
+      internalID: -1666336115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 151
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276867463a8e25747b1f6225957aecdf
+      internalID: -668683357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 148
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a68156d6ad1fa64f8b32d835bf874df
+      internalID: 558555087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 147
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8683e71975f1342459a1752e31782ab9
+      internalID: 1845740765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 151
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c303aa45a3245438207d5f9ccc6268
+      internalID: 787213472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 155
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87714dd653ae470439cbfd9a57c25a2a
+      internalID: 1829602279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 105
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651f29492b184ff4e8545ffc4c8208dd
+      internalID: -1284528882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 105
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b1ac3eee77a774782d65e1eeccf33d
+      internalID: 1294877739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 105
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455fd584d84dc2f46838216070e629f4
+      internalID: 1067688464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 105
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c950b4903312c9946ba09f33a82e732a
+      internalID: -1648178133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 105
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f859bb189af523e4e8c9105929c0a032
+      internalID: -1223783826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 59
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2016b9fde854d7b40bb1f22a3146c9e1
+      internalID: -92004937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 59
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7837ea14dd34fda4c85d1d0a482e7b4d
+      internalID: 1698740190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 57
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5503f847187e654b84d924043acdc7d
+      internalID: -437228170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 57
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8d4f4da58993d49917921473a10a21
+      internalID: -530899267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 55
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca76b17983ed3b74591c969fdd40bd9d
+      internalID: -1617128976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 55
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889d455ba37701b4e82c75c64964585b
+      internalID: 882242624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 57
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56388daf68f26664596717ee3045eb70
+      internalID: -1390529771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 57
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f16394ad9ef8e4391725d1e97a8453
+      internalID: -735779810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 55
+        width: 6
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f855c378c7f18e84ea57c70acdeafb9d
+      internalID: 244395429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 55
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fba02825715c2741abde33dc98d2208
+      internalID: -465021252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 57
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932211337f3bfb54fb7b7d2f22aa086e
+      internalID: -237205389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 57
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3aa7c738436ceb408c635eb41df51df
+      internalID: 1723562203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 60
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0d255833ddc2e4fb24575160a1ea7b
+      internalID: 1243210685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 60
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c208b12d6764cbb49afe938d1e76355e
+      internalID: -254948594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 62
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be6dddd3a06f724d81719364605fae5
+      internalID: -2016170642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickout Target Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 62
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a34bd1e3d7a3a4d84e3e6aed0b0dd1
+      internalID: -1503206358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Kickout Target Sprite Sheet_0: -1666336115
+      Kickout Target Sprite Sheet_1: -668683357
+      Kickout Target Sprite Sheet_10: -1223783826
+      Kickout Target Sprite Sheet_11: -92004937
+      Kickout Target Sprite Sheet_12: 1698740190
+      Kickout Target Sprite Sheet_13: -437228170
+      Kickout Target Sprite Sheet_14: -530899267
+      Kickout Target Sprite Sheet_15: -1617128976
+      Kickout Target Sprite Sheet_16: 882242624
+      Kickout Target Sprite Sheet_17: -1390529771
+      Kickout Target Sprite Sheet_18: -735779810
+      Kickout Target Sprite Sheet_19: 244395429
+      Kickout Target Sprite Sheet_2: 558555087
+      Kickout Target Sprite Sheet_20: -465021252
+      Kickout Target Sprite Sheet_21: -237205389
+      Kickout Target Sprite Sheet_22: 1723562203
+      Kickout Target Sprite Sheet_23: 1243210685
+      Kickout Target Sprite Sheet_24: -254948594
+      Kickout Target Sprite Sheet_25: -2016170642
+      Kickout Target Sprite Sheet_26: -1503206358
+      Kickout Target Sprite Sheet_3: 1845740765
+      Kickout Target Sprite Sheet_4: 787213472
+      Kickout Target Sprite Sheet_5: 1829602279
+      Kickout Target Sprite Sheet_6: -1284528882
+      Kickout Target Sprite Sheet_7: 1294877739
+      Kickout Target Sprite Sheet_8: 1067688464
+      Kickout Target Sprite Sheet_9: -1648178133
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
