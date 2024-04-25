@@ -10,6 +10,9 @@ public class RewardScript : MonoBehaviour
     [Header("Target Types")]
     public bool isSuddenSpecial = false;
     private bool disabled = false;
+    public bool isDropTarget = false;
+    public float moleMin = 2.0f;
+    public float moleMax = 5.0f;
 
     private void Start()
     {
@@ -28,8 +31,25 @@ public class RewardScript : MonoBehaviour
                 transform.parent.GetComponent<SuddenSpecial>().NextTarget();
             }
 
-            KillTarget();
+            if (!isDropTarget)
+            { 
+                KillTarget(); 
+            }
+
+            if (isDropTarget)
+            {
+                StartCoroutine(hideMole());
+            }
         }
+    }
+
+    public  IEnumerator hideMole()
+    {
+        disabled = true;
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(Random.Range(moleMin, moleMax));
+        disabled = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
 
     // This function disables and hides the target.
