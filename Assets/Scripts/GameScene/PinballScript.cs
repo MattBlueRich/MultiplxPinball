@@ -165,5 +165,5 @@ public class PinballScript : MonoBehaviour
         // Return Level Movement.
         LevelMovement.LevelSpeed = tempLevelSpeed;
     }
-
 }
+
