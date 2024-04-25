@@ -20,9 +20,8 @@ public class RewardScript : MonoBehaviour
     private Score score;
     [Header("Value")]
     public int scoreValue;
-    [Header("Target Types")]
-    public bool isSuddenSpecial = false;
-    public bool isDropTarget = false;
+    
+   
     [Header("Drop Target Values")]
     public float moleMin = 2.0f;
     public float moleMax = 5.0f;
@@ -52,6 +51,10 @@ public class RewardScript : MonoBehaviour
                     break;
 
                 case targetType.StationaryTarget:
+                    KillTarget();
+                    break;
+
+                case targetType.SkillShotTarget:
                     KillTarget();
                     break;
 
