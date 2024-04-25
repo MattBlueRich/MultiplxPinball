@@ -9,10 +9,12 @@ public class RewardScript : MonoBehaviour
     public int scoreValue;
     [Header("Target Types")]
     public bool isSuddenSpecial = false;
-    private bool disabled = false;
     public bool isDropTarget = false;
+    [Header("Drop Target Values")]
     public float moleMin = 2.0f;
     public float moleMax = 5.0f;
+    
+    private bool disabled = false;
 
     private void Start()
     {
@@ -31,11 +33,13 @@ public class RewardScript : MonoBehaviour
                 transform.parent.GetComponent<SuddenSpecial>().NextTarget();
             }
 
-            if (!isDropTarget)
+            // This if-statement contains all the targets which shouldn't destroy itself (using '!')
+            if (!isDropTarget && !isSuddenSpecial)
             { 
                 KillTarget(); 
             }
 
+            // This if-statement is only for the drop target, and hides the target for a random period of time.
             if (isDropTarget)
             {
                 StartCoroutine(hideMole());
@@ -73,7 +77,8 @@ public class RewardScript : MonoBehaviour
         else
         {
             disabled = true;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            Color32 disabledColour = new Color32(255, 255, 255, 30);
+            gameObject.GetComponent<SpriteRenderer>().color = disabledColour;
         }
     }
 
