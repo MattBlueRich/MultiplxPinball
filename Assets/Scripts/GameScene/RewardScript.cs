@@ -2,8 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum targetType
+{
+    Bumper,
+    StationaryTarget,
+    DropTarget,
+    SkillShotTarget,
+    SuddenSpecialTarget
+}
+
+
 public class RewardScript : MonoBehaviour
 {
+    [SerializeField]
+    targetType type;  
+    
     private Score score;
     [Header("Value")]
     public int scoreValue;
@@ -28,21 +41,20 @@ public class RewardScript : MonoBehaviour
         {
             score.AddScore(scoreValue);
 
-            if (isSuddenSpecial)
+            switch (type)
             {
-                transform.parent.GetComponent<SuddenSpecial>().NextTarget();
-            }
+                case targetType.SuddenSpecialTarget:
+                    transform.parent.GetComponent<SuddenSpecial>().NextTarget();
+                    break;
 
-            // This if-statement contains all the targets which shouldn't destroy itself (using '!')
-            if (!isDropTarget && !isSuddenSpecial)
-            { 
-                KillTarget(); 
-            }
+                case targetType.DropTarget:
+                    StartCoroutine(hideMole());
+                    break;
 
-            // This if-statement is only for the drop target, and hides the target for a random period of time.
-            if (isDropTarget)
-            {
-                StartCoroutine(hideMole());
+                case targetType.StationaryTarget:
+                    KillTarget();
+                    break;
+
             }
         }
     }
