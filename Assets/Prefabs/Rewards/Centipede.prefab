@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6e01b2fc133ed49b73e03324ce55c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 4
   scoreValue: 10
   isSuddenSpecial: 1
   isDropTarget: 0
@@ -298,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6e01b2fc133ed49b73e03324ce55c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 4
   scoreValue: 10
   isSuddenSpecial: 1
   isDropTarget: 0
@@ -436,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6e01b2fc133ed49b73e03324ce55c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 4
   scoreValue: 10
   isSuddenSpecial: 1
   isDropTarget: 0
@@ -574,6 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6e01b2fc133ed49b73e03324ce55c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 4
   scoreValue: 10
   isSuddenSpecial: 1
   isDropTarget: 0
