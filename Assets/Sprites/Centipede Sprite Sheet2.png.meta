@@ -118,7 +118,7 @@ TextureImporter:
         width: 11
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,15 +131,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centipede Sprite Sheet2_1
+      name: Legs-2
       rect:
         serializedVersion: 2
-        x: 111
+        x: 125
         y: 88
-        width: 9
+        width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,15 +152,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centipede Sprite Sheet2_2
+      name: Legs-1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 110
         y: 88
-        width: 10
+        width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centipede Sprite Sheet2_3
+      name: Legs-3
       rect:
         serializedVersion: 2
         x: 140
@@ -181,7 +181,7 @@ TextureImporter:
         width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centipede Sprite Sheet2_4
+      name: SST-1
       rect:
         serializedVersion: 2
         x: 94
@@ -202,7 +202,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centipede Sprite Sheet2_5
+      name: SST-2
       rect:
         serializedVersion: 2
         x: 111
@@ -223,7 +223,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centipede Sprite Sheet2_6
+      name: SST-3
       rect:
         serializedVersion: 2
         x: 128
@@ -244,7 +244,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centipede Sprite Sheet2_7
+      name: SST-4
       rect:
         serializedVersion: 2
         x: 145
@@ -265,7 +265,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -289,13 +289,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Centipede Sprite Sheet2_0: 1878231332
-      Centipede Sprite Sheet2_1: -1068203098
-      Centipede Sprite Sheet2_2: 1305569777
-      Centipede Sprite Sheet2_3: 1776943761
-      Centipede Sprite Sheet2_4: -651164226
-      Centipede Sprite Sheet2_5: -524306606
-      Centipede Sprite Sheet2_6: 1758283840
-      Centipede Sprite Sheet2_7: -211609682
+      Legs-1: 1305569777
+      Legs-2: -1068203098
+      Legs-3: 1776943761
+      SST-1: -651164226
+      SST-2: -524306606
+      SST-3: 1758283840
+      SST-4: -211609682
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
