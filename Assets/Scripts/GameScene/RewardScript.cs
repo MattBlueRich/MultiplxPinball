@@ -8,7 +8,8 @@ public enum targetType
     StationaryTarget,
     DropTarget,
     SkillShotTarget,
-    SuddenSpecialTarget
+    SuddenSpecialTarget,
+    JackpotLetter
 }
 
 
@@ -16,22 +17,31 @@ public class RewardScript : MonoBehaviour
 {
     [SerializeField]
     targetType type;  
-    
-    private Score score;
+        
     [Header("Value")]
     public int scoreValue;
-    
-   
+    private Score score;
+
     [Header("Drop Target Values")]
     public float moleMin = 2.0f;
     public float moleMax = 5.0f;
-    
+
+    [Header("Jackpot Letter Sprites")]
+    public List<Sprite> jackpotLetterSprites = new List<Sprite>();
+    private char jackpotLetter;
+
     private bool disabled = false;
 
     private void Start()
     {
         // In order to access the Score Manager, and make this object a prefab, we must get access to it via this method:
         score = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<Score>();
+
+        // If the reward is a jackpot letter, then pick a random letter sprite from the available letters.
+        if(type == targetType.JackpotLetter)
+        {
+            PickRandomLetter();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,11 +67,14 @@ public class RewardScript : MonoBehaviour
                 case targetType.SkillShotTarget:
                     KillTarget();
                     break;
+                case targetType.JackpotLetter:
+                    score.AddLetter(jackpotLetter);
+                    KillTarget();
+                    break;
 
             }
         }
     }
-
     public  IEnumerator hideMole()
     {
         disabled = true;
@@ -94,6 +107,26 @@ public class RewardScript : MonoBehaviour
             disabled = true;
             Color32 disabledColour = new Color32(255, 255, 255, 30);
             gameObject.GetComponent<SpriteRenderer>().color = disabledColour;
+        }
+    }
+
+    public void PickRandomLetter()
+    {
+        // Pick a random character from the remaining jackpot letters.
+        int letterIndex = Random.Range(0, score.jackpotLettersRemaining.Count);
+        jackpotLetter = score.jackpotLettersRemaining[letterIndex];
+
+        // Find sprite in list with the same character.
+        foreach(Sprite s in jackpotLetterSprites)
+        {
+            if (s.name.Contains(jackpotLetter))
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = s;
+            }
+            else
+            {
+                continue;
+            }
         }
     }
 
