@@ -48,6 +48,10 @@ public class RewardScript : MonoBehaviour
                     break;
 
                 case targetType.DropTarget:
+
+                    Vector2 direction = (this.transform.position - collision.transform.position).normalized;
+                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * 700f, ForceMode2D.Impulse);
+
                     StartCoroutine(hideMole());
                     break;
 
@@ -59,13 +63,16 @@ public class RewardScript : MonoBehaviour
         }
     }
 
-    public  IEnumerator hideMole()
+    public IEnumerator hideMole()
     {
         disabled = true;
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        Animator dropTargetAnimator = transform.GetChild(0).GetComponent<Animator>();
+
+        dropTargetAnimator.SetTrigger("Hit");
         yield return new WaitForSeconds(Random.Range(moleMin, moleMax));
         disabled = false;
-        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        dropTargetAnimator.SetTrigger("Reveal");
     }
 
     // This function disables and hides the target.
