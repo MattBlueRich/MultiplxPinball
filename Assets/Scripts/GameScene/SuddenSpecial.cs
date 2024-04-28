@@ -42,8 +42,11 @@ public class SuddenSpecial : MonoBehaviour
     {
         if(currentTarget == maxTargets-1)
         {
+            currentTarget++;
+            SetTargets();
             Debug.Log("Sudden Special Jackpot!");
             score.AddScore(jackpotValue); // Awards jackpot value to current score.
+            transform.parent.GetComponent<CentipedeMovement>().PlayDeathAnimation();
         }
         else
         {
