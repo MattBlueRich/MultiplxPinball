@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 3104664620835758973}
   - component: {fileID: 1126159323469309441}
   - component: {fileID: 1667103366502007020}
+  - component: {fileID: 3650665127627751774}
   m_Layer: 0
   m_Name: Drop Target
   m_TagString: Untagged
@@ -136,10 +137,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   scoreValue: 50
-  isSuddenSpecial: 0
-  isDropTarget: 1
+  rewardSFX:
+  - {fileID: 8300000, guid: 89c0bc6710953994b8a9a142666816fd, type: 3}
   moleMin: 2
   moleMax: 5
+  jackpotLetterSprites: []
+  explosionMaterial: {fileID: 0}
+  explosionSFX:
+  - {fileID: 8300000, guid: b708a1d00f1ed9846a2612554637b382, type: 3}
+  - {fileID: 8300000, guid: 0939292930c0a744d95b14c2c92fe06a, type: 3}
+  - {fileID: 8300000, guid: 24c4951b20b18194a858d73af8d8d838, type: 3}
+  - {fileID: 8300000, guid: 48ac99bd28315e746925a672a4eee48b, type: 3}
+  - {fileID: 8300000, guid: dcf9741c55828c943967a7406387073f, type: 3}
 --- !u!58 &8127871332719820434
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -252,6 +261,102 @@ MonoBehaviour:
   maxY: {x: 0, y: 0, z: 0}
   minY: {x: 0, y: 0.5, z: 0}
   slowness: 0.5
+--- !u!82 &3650665127627751774
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022892190577542036}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4101278328796348230
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2947560048369780136}
-  - component: {fileID: 3490413877038495628}
+  - component: {fileID: 2217564881926371124}
   m_Layer: 0
   m_Name: Squid Sprite
   m_TagString: Untagged
@@ -286,7 +391,7 @@ Transform:
   - {fileID: 5987891852962857222}
   m_Father: {fileID: 5413003469301382689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3490413877038495628
+--- !u!95 &2217564881926371124
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -296,7 +401,7 @@ Animator:
   m_GameObject: {fileID: 4101278328796348230}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03a6172e7e1e5db47aa2df9a8d768352, type: 2}
+  m_Controller: {fileID: 9100000, guid: e261ad8cc0819724ab2b63b41f975649, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

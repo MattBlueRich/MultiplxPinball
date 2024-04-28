@@ -12,7 +12,7 @@ public class CentipedeMovement : MonoBehaviour
     public float moveSpeed = 5;
     public GameObject[] targets;
     private Quaternion targetRotation;
-    public Animator animator;
+    private bool flyOut = false;
 
     // Update is called once per frame
     void Update()
@@ -39,6 +39,11 @@ public class CentipedeMovement : MonoBehaviour
                 nextPoint = 0;
             }
         }
+
+        if (flyOut)
+        {
+            transform.Translate((Vector3.left * 50f) * Time.deltaTime);
+        }
     }
 
     void FixTargetRotation()
@@ -53,7 +58,6 @@ public class CentipedeMovement : MonoBehaviour
     {
         StartCoroutine(PlayFinalExplosion());
         isMoving = false;
-        animator.SetTrigger("Death");
 
         IEnumerator PlayFinalExplosion()
         {
@@ -62,6 +66,9 @@ public class CentipedeMovement : MonoBehaviour
                 targets[i].GetComponent<RewardScript>().PlayExplosion();
                 yield return new WaitForSeconds(.25f);
             }
+            yield return new WaitForSeconds(.25f);
+            flyOut = true;
+            Destroy(transform.parent.gameObject, 2f);
         }
     }
 

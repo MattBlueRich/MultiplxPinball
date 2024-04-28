@@ -12,7 +12,6 @@ public enum targetType
     JackpotLetter
 }
 
-
 public class RewardScript : MonoBehaviour
 {
     [SerializeField]
@@ -72,6 +71,10 @@ public class RewardScript : MonoBehaviour
                     break;
 
                 case targetType.DropTarget:
+                   
+                    Vector2 direction = (this.transform.position - collision.transform.position).normalized;
+                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * 700f, ForceMode2D.Impulse);
+
                     StartCoroutine(hideMole());
                     break;
 
@@ -86,7 +89,6 @@ public class RewardScript : MonoBehaviour
                     score.AddLetter(jackpotLetter);
                     KillTarget();
                     break;
-
             }
         }
     }
@@ -94,10 +96,10 @@ public class RewardScript : MonoBehaviour
     {
         PlayExplosion();
         disabled = true;
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        transform.GetChild(0).GetComponent<Animator>().SetTrigger("Hit");
         yield return new WaitForSeconds(Random.Range(moleMin, moleMax));
         disabled = false;
-        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        transform.GetChild(0).GetComponent<Animator>().SetTrigger("Reveal");
     }
 
     // This function disables and hides the target.
