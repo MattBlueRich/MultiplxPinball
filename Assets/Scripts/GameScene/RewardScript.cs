@@ -21,6 +21,7 @@ public class RewardScript : MonoBehaviour
     [Header("Value")]
     public int scoreValue;
     private Score score;
+    public AudioClip[] rewardSFX;
 
     [Header("Drop Target Values")]
     public float moleMin = 2.0f;
@@ -30,8 +31,16 @@ public class RewardScript : MonoBehaviour
     public List<Sprite> jackpotLetterSprites = new List<Sprite>();
     private char jackpotLetter;
 
-    private bool disabled = false;
+    [Header("Explosion Effect")]
+    public Material explosionMaterial;
+    private bool animateExplosion = false;
+    private float explosionFlickerTime = .01f;
+    public AudioClip[] explosionSFX;
 
+    private AudioSource audioSource;
+    
+    private Object explosionRef;
+    private bool disabled = false;  
     private void Start()
     {
         // In order to access the Score Manager, and make this object a prefab, we must get access to it via this method:
@@ -42,6 +51,10 @@ public class RewardScript : MonoBehaviour
         {
             PickRandomLetter();
         }
+
+        explosionRef = Resources.Load("SimpleExplosion");
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -49,10 +62,12 @@ public class RewardScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Pinball") && !disabled)
         {
             score.AddScore(scoreValue);
+            PlayRandomSFX("score");
 
             switch (type)
             {
                 case targetType.SuddenSpecialTarget:
+                    PlayExplosion();
                     transform.parent.GetComponent<SuddenSpecial>().NextTarget();
                     break;
 
@@ -75,8 +90,9 @@ public class RewardScript : MonoBehaviour
             }
         }
     }
-    public  IEnumerator hideMole()
+    public IEnumerator hideMole()
     {
+        PlayExplosion();
         disabled = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(Random.Range(moleMin, moleMax));
@@ -89,7 +105,7 @@ public class RewardScript : MonoBehaviour
     {
         disabled = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        // Here we can add some kind of death animation, with a cloud particle effect.
+        PlayExplosion();
     }
     
     /* This function is called by the SuddenSpecial.cs, which is a empty parent of Sudden Special Targets.
@@ -130,4 +146,57 @@ public class RewardScript : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        // This if-statement just animates the explosion particle effect to flicker between colours while active.
+        if (animateExplosion)
+        {
+            explosionFlickerTime -= Time.deltaTime;
+
+            if(explosionFlickerTime < 0)
+            {                
+                if(explosionMaterial.color == Color.red)
+                {
+                    explosionMaterial.color = Color.yellow;
+                }
+                else
+                {
+                    explosionMaterial.color = Color.red;
+                }
+
+                explosionFlickerTime = .01f;
+            }
+        }
+    }
+
+    public void PlayRandomSFX(string soundType)
+    {
+        switch (soundType)
+        {
+            case "score":
+                audioSource.PlayOneShot(rewardSFX[Random.Range(0, rewardSFX.Length)]);
+                break;
+            case "explosion":
+                audioSource.PlayOneShot(explosionSFX[Random.Range(0, explosionSFX.Length)], 1f);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void PlayExplosion()
+    {
+        // This is all in charge of creating the explosion particle effect.
+        GameObject explosion = (GameObject)Instantiate(explosionRef);
+        explosion.transform.position = transform.position;
+        PlayRandomSFX("explosion");
+        StartCoroutine(ExplosionLifeTime());
+        IEnumerator ExplosionLifeTime()
+        {
+            animateExplosion = true;
+            yield return new WaitForSeconds(2);
+            animateExplosion = false;
+            Destroy(explosion);
+        }
+    }
 }
