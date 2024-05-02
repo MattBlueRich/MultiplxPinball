@@ -25,7 +25,7 @@ public class PinballScript : MonoBehaviour
     private float gateSpeed;
     private Vector2 gateEndForce;
     private CircleCollider2D circleCollider;
-    private float tempLevelSpeed;
+    private float tempLevelSpeed = 1.0f;
 
     [Header("Music Manager Effects")]
     public AudioLowPassFilter managerLowPassFilter;
@@ -45,7 +45,7 @@ public class PinballScript : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
 
         // Reset music effects.
-        managerLowPassFilter.enabled = false;
+        managerLowPassFilter.enabled = false; 
     }
 
     void Update()

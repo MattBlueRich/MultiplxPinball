@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LevelMovement : MonoBehaviour
 {   
-    
     //Sets int for level movement speed
     public static float LevelSpeed = 0f; 
 
@@ -12,8 +11,6 @@ public class LevelMovement : MonoBehaviour
     void Update()
     {   
         //Drops level down through view
-        transform.position += new Vector3(0, -LevelSpeed * Time.deltaTime, 0);
-        
-       
+        transform.position += new Vector3(0, -LevelSpeed * Time.deltaTime, 0);      
     }
 }
