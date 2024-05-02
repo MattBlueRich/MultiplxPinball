@@ -148,13 +148,14 @@ MonoBehaviour:
   - {fileID: -959304270, guid: fb47330340e01384d9af3436e99ecffd, type: 3}
   - {fileID: 1761340403, guid: fb47330340e01384d9af3436e99ecffd, type: 3}
   - {fileID: -930079716, guid: fb47330340e01384d9af3436e99ecffd, type: 3}
-  explosionMaterial: {fileID: 0}
+  explosionMaterial: {fileID: 2100000, guid: 0ecd1f6b016518546b8c5af854dbdfe5, type: 2}
   explosionSFX:
   - {fileID: 8300000, guid: b708a1d00f1ed9846a2612554637b382, type: 3}
   - {fileID: 8300000, guid: 0939292930c0a744d95b14c2c92fe06a, type: 3}
   - {fileID: 8300000, guid: 24c4951b20b18194a858d73af8d8d838, type: 3}
   - {fileID: 8300000, guid: 48ac99bd28315e746925a672a4eee48b, type: 3}
   - {fileID: 8300000, guid: dcf9741c55828c943967a7406387073f, type: 3}
+  bumperForce: 0
 --- !u!82 &5101425260204095177
 AudioSource:
   m_ObjectHideFlags: 0
