@@ -106,7 +106,7 @@ MonoBehaviour:
   moleMin: 2
   moleMax: 5
   jackpotLetterSprites: []
-  explosionMaterial: {fileID: 0}
+  explosionMaterial: {fileID: 2100000, guid: 0ecd1f6b016518546b8c5af854dbdfe5, type: 2}
   explosionSFX:
   - {fileID: 8300000, guid: b708a1d00f1ed9846a2612554637b382, type: 3}
   - {fileID: 8300000, guid: 0939292930c0a744d95b14c2c92fe06a, type: 3}
