@@ -36,6 +36,9 @@ public class RewardScript : MonoBehaviour
     private float explosionFlickerTime = .01f;
     public AudioClip[] explosionSFX;
 
+    [Header("Bumper Properties")]
+    public float bumperForce;
+
     private AudioSource audioSource;
     
     private Object explosionRef;
@@ -88,6 +91,11 @@ public class RewardScript : MonoBehaviour
                 case targetType.JackpotLetter:
                     score.AddLetter(jackpotLetter);
                     KillTarget();
+                    break;
+
+                case targetType.Bumper:
+                    Vector2 bumperDirection = (this.transform.position - collision.transform.position).normalized;
+                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(bumperDirection * -bumperForce, ForceMode2D.Impulse);
                     break;
             }
         }
