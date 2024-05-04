@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] float torque;
     [SerializeField] bool isLeft;
-    private KeyCode[] flipKey;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +34,11 @@ public class PlayerController : MonoBehaviour
         {
             if (isLeft)
             {
-                return Input.GetKey(KeyCode.LeftShift);
+                return Input.GetKey(KeyCode.LeftControl);
             }
             else
             {
-                return Input.GetKey(KeyCode.RightShift);
+                return Input.GetKey(KeyCode.RightControl);
             }
         }
     }
