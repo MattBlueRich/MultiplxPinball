@@ -10,6 +10,7 @@ public class Score : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public int score;
+    public static int startingScore = 0;
 
     public List<char> jackpotLetters = new List<char>() { 'M', 'U', 'L', 'T', 'I', 'P', 'L', 'X', };
     public List<char> jackpotLettersRemaining;
@@ -20,7 +21,8 @@ public class Score : MonoBehaviour
     }
     private void Start()
     {
-        score = 0; // Subject to change with a lives system.       
+        score = startingScore;
+        scoreText.text = score.ToString();
     }
 
     public void AddScore(int scoreValue)
@@ -48,5 +50,15 @@ public class Score : MonoBehaviour
             AddScore(1500); // Award jackpot value.
             jackpotLettersRemaining = jackpotLetters;
         }
+    }
+
+    // These functions are called by the LivesManager.cs to save score with lives, and reset on game-over with no lives.
+    public void SaveScore()
+    {
+        startingScore = score;
+    }
+    public void ResetScore()
+    {
+        startingScore = 0;
     }
 }
