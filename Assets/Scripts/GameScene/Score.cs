@@ -31,7 +31,7 @@ public class Score : MonoBehaviour
     {
         score = startingScore;
         _score = score;
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString("F0");
     }
 
     private void Update()
