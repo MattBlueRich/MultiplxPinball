@@ -274,8 +274,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1591971493}
   score: 0
+  _score: 0
   jackpotLetters: 4d0055004c005400490050004c005800
   jackpotLettersRemaining: 
+  pinballScript: {fileID: 2039358130}
 --- !u!4 &336974561
 Transform:
   m_ObjectHideFlags: 0
@@ -660,7 +662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &542011766
 BoxCollider2D:
   m_ObjectHideFlags: 0
