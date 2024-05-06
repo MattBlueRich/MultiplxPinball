@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3713985658463432096}
   - component: {fileID: 4169078176612233566}
   - component: {fileID: 9202599805994060723}
+  - component: {fileID: 1857637394185689410}
   m_Layer: 0
   m_Name: Stationary Target
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -593972314, guid: f187c6faf5d42504e845f8f8e8fddc0c, type: 3}
   m_Color: {r: 0.869962, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,6 +116,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 24c4951b20b18194a858d73af8d8d838, type: 3}
   - {fileID: 8300000, guid: 48ac99bd28315e746925a672a4eee48b, type: 3}
   - {fileID: 8300000, guid: dcf9741c55828c943967a7406387073f, type: 3}
+  bumperForce: 0
 --- !u!58 &4169078176612233566
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -246,3 +248,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1857637394185689410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749677459899910264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe000e45e137e4f8e3ecaaad8c60c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -593972314, guid: f187c6faf5d42504e845f8f8e8fddc0c, type: 3}
+  - {fileID: 265815471, guid: f187c6faf5d42504e845f8f8e8fddc0c, type: 3}
+  - {fileID: -137712037, guid: f187c6faf5d42504e845f8f8e8fddc0c, type: 3}
+  - {fileID: 265308334, guid: f187c6faf5d42504e845f8f8e8fddc0c, type: 3}
+  - {fileID: -1591780476, guid: f187c6faf5d42504e845f8f8e8fddc0c, type: 3}
