@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5722702503444784117}
   - component: {fileID: 5063753791165491129}
   - component: {fileID: -6437434315281363713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Empty Level Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
