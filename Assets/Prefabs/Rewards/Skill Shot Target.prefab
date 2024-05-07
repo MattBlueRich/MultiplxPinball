@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.18161473, b: 0, a: 1}
+  m_Sprite: {fileID: -132138187, guid: a328b09aaf8c0d74ebccfb9314449ad7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,9 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  scoreValue: 500
+  scoreValue: 100
   rewardSFX:
-  - {fileID: 8300000, guid: 48800d1ae23d2b7478248c65f292bd95, type: 3}
+  - {fileID: 8300000, guid: c0fcee8007bca3d43b3cb98a10bd9aaf, type: 3}
+  - {fileID: 8300000, guid: bfca11d461a19c249880eb5e6e82105f, type: 3}
+  - {fileID: 8300000, guid: eaa9eba638e2f794ea02871fc6e12971, type: 3}
   moleMin: 2
   moleMax: 5
   jackpotLetterSprites: []
@@ -113,6 +115,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 24c4951b20b18194a858d73af8d8d838, type: 3}
   - {fileID: 8300000, guid: 48ac99bd28315e746925a672a4eee48b, type: 3}
   - {fileID: 8300000, guid: dcf9741c55828c943967a7406387073f, type: 3}
+  bumperForce: 0
 --- !u!58 &4169078176612233566
 CircleCollider2D:
   m_ObjectHideFlags: 0
