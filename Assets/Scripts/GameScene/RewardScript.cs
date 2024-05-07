@@ -211,9 +211,11 @@ public class RewardScript : MonoBehaviour
     IEnumerator PlayBumperAnimation()
     {
         GetComponent<Animator>().SetBool("Angry", true);
+        transform.GetChild(0).GetComponent<Animator>().SetBool("Start", true);
         GetComponent<CircleCollider2D>().radius = 2f;
         yield return new WaitForSeconds(.5f);
         GetComponent<Animator>().SetBool("Angry", false);
+        transform.GetChild(0).GetComponent<Animator>().SetBool("Start", false);
         GetComponent<CircleCollider2D>().radius = 1f;
     }
 }
