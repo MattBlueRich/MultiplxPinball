@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pinball
   - ScoreManager
+  - Level
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Level
+  - Ignore Level
   - 
   - 
   - 

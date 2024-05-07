@@ -96,6 +96,8 @@ public class RewardScript : MonoBehaviour
                 case targetType.Bumper:
                     Vector2 bumperDirection = (this.transform.position - collision.transform.position).normalized;
                     collision.gameObject.GetComponent<Rigidbody2D>().AddForce(bumperDirection * -bumperForce, ForceMode2D.Impulse);
+                    PlayExplosion();
+                    StartCoroutine(PlayBumperAnimation());
                     break;
             }
         }
@@ -135,7 +137,6 @@ public class RewardScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = disabledColour;
         }
     }
-
     public void PickRandomLetter()
     {
         // Pick a random character from the remaining jackpot letters.
@@ -155,7 +156,6 @@ public class RewardScript : MonoBehaviour
             }
         }
     }
-
     private void Update()
     {
         // This if-statement just animates the explosion particle effect to flicker between colours while active.
@@ -178,7 +178,6 @@ public class RewardScript : MonoBehaviour
             }
         }
     }
-
     public void PlayRandomSFX(string soundType)
     {
         switch (soundType)
@@ -193,7 +192,6 @@ public class RewardScript : MonoBehaviour
                 break;
         }
     }
-
     public void PlayExplosion()
     {
         // This is all in charge of creating the explosion particle effect.
@@ -208,5 +206,14 @@ public class RewardScript : MonoBehaviour
             animateExplosion = false;
             Destroy(explosion);
         }
+    }
+
+    IEnumerator PlayBumperAnimation()
+    {
+        GetComponent<Animator>().SetBool("Angry", true);
+        GetComponent<CircleCollider2D>().radius = 2f;
+        yield return new WaitForSeconds(.5f);
+        GetComponent<Animator>().SetBool("Angry", false);
+        GetComponent<CircleCollider2D>().radius = 1f;
     }
 }
