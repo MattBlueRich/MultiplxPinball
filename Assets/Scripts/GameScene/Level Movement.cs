@@ -7,11 +7,6 @@ public class LevelMovement : MonoBehaviour
     //Sets int for level movement speed
     public static float LevelSpeed = 0f;
 
-    private void Start()
-    {
-        LevelSpeed = 0f;
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {   

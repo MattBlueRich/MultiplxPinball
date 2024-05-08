@@ -18,6 +18,11 @@ public class StartManager : MonoBehaviour
     private bool startGame = false;
     private bool gameStarted = false;
 
+    private void Start()
+    {
+        LevelMovement.LevelSpeed = 0f;
+    }
+
     void FixedUpdate()
     {
         if (!startGame && !gameStarted)

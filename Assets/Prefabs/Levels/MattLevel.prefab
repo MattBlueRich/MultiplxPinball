@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: -6437434315281363713}
   m_Layer: 6
   m_Name: MattLevel
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3679,7 +3679,6 @@ GameObject:
   - component: {fileID: 7243964091680456891}
   - component: {fileID: 7584924168191612862}
   - component: {fileID: 8997991843620734864}
-  - component: {fileID: 7509963842972861955}
   - component: {fileID: 1837265431680689433}
   - component: {fileID: 5781681451813470977}
   - component: {fileID: 2386392752665071595}
@@ -5536,18 +5535,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &7509963842972861955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7764776184029752077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72631fbd9518a0c42a4de0ba9f561d6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1837265431680689433
 Rigidbody2D:
   serializedVersion: 4

@@ -76,7 +76,7 @@ public class RewardScript : MonoBehaviour
                 case targetType.DropTarget:
                    
                     Vector2 direction = (this.transform.position - collision.transform.position).normalized;
-                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * 700f, ForceMode2D.Impulse);
+                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * -bumperForce, ForceMode2D.Impulse);
 
                     StartCoroutine(hideMole());
                     break;
