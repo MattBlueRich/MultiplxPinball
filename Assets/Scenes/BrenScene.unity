@@ -20628,6 +20628,7 @@ MonoBehaviour:
   managerLowPassFilter: {fileID: 1086631123}
   tilemapFocus: {fileID: 486556611}
   gateParticles: {fileID: 187567096}
+  gateSFX: {fileID: 8300000, guid: a4f6756af998ec1419a4335b55dd50c8, type: 3}
 --- !u!82 &2039358131
 AudioSource:
   m_ObjectHideFlags: 0
