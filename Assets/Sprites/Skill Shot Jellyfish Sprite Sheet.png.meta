@@ -134,10 +134,10 @@ TextureImporter:
       name: Skill Shot Jellyfish Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 141
-        y: 112
-        width: 8
-        height: 8
+        x: 171
+        y: 125
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,7 +155,7 @@ TextureImporter:
       name: Skill Shot Jellyfish Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 155
+        x: 141
         y: 112
         width: 8
         height: 8
@@ -176,8 +176,8 @@ TextureImporter:
       name: Skill Shot Jellyfish Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 141
-        y: 100
+        x: 155
+        y: 112
         width: 8
         height: 8
       alignment: 0
@@ -197,10 +197,10 @@ TextureImporter:
       name: Skill Shot Jellyfish Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 155
-        y: 100
-        width: 8
-        height: 8
+        x: 170
+        y: 112
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,7 +219,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 141
-        y: 88
+        y: 100
         width: 8
         height: 8
       alignment: 0
@@ -240,7 +240,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 155
-        y: 88
+        y: 100
         width: 8
         height: 8
       alignment: 0
@@ -260,10 +260,10 @@ TextureImporter:
       name: Skill Shot Jellyfish Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 142
-        y: 76
+        x: 170
+        y: 101
         width: 7
-        height: 8
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,6 +281,69 @@ TextureImporter:
       name: Skill Shot Jellyfish Sprite Sheet_8
       rect:
         serializedVersion: 2
+        x: 141
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033c645f17817ae4b8d6c53ba3328482
+      internalID: 2095836020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill Shot Jellyfish Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09096e36112ffd4ab01a0e030ee648a
+      internalID: 1577824240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill Shot Jellyfish Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 76
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b2c01b786a57540a04ac9b288c0969
+      internalID: 1787329810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill Shot Jellyfish Sprite Sheet_11
+      rect:
+        serializedVersion: 2
         x: 156
         y: 76
         width: 7
@@ -292,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 033c645f17817ae4b8d6c53ba3328482
-      internalID: 2095836020
+      spriteID: 809f0e581cd79f9468858260ad5355af
+      internalID: 1890541613
       vertices: []
       indices: 
       edges: []
@@ -311,6 +374,8 @@ TextureImporter:
     nameFileIdTable:
       Skill Shot Jellyfish Sprite Sheet_0: 438494455
       Skill Shot Jellyfish Sprite Sheet_1: 2063149415
+      Skill Shot Jellyfish Sprite Sheet_10: 1787329810
+      Skill Shot Jellyfish Sprite Sheet_11: 1890541613
       Skill Shot Jellyfish Sprite Sheet_2: -1732014485
       Skill Shot Jellyfish Sprite Sheet_3: 1344969175
       Skill Shot Jellyfish Sprite Sheet_4: -987219303
@@ -318,6 +383,7 @@ TextureImporter:
       Skill Shot Jellyfish Sprite Sheet_6: -915770615
       Skill Shot Jellyfish Sprite Sheet_7: -755856380
       Skill Shot Jellyfish Sprite Sheet_8: 2095836020
+      Skill Shot Jellyfish Sprite Sheet_9: 1577824240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
