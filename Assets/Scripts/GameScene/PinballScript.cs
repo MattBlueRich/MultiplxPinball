@@ -33,7 +33,9 @@ public class PinballScript : MonoBehaviour
     [Header("Other")]
     public TilemapFocus tilemapFocus;
 
+    [Header("Gate Effects")]
     public ParticleSystem gateParticles;
+    public AudioClip gateSFX;
     bool showingParticles = false;
 
     void Start()
@@ -81,6 +83,7 @@ public class PinballScript : MonoBehaviour
             {
                 showingParticles = true;
                 gateParticles.gameObject.SetActive(true);
+                InvokeRepeating("PlayGateSFX",0, .3f);
             }
 
             gateParticles.transform.position = transform.position;
@@ -135,6 +138,7 @@ public class PinballScript : MonoBehaviour
                 showingParticles = false;
                 
                 gateParticles.gameObject.SetActive(false);
+                CancelInvoke("PlayGateSFX");
             }     
         }
         #endregion
@@ -184,6 +188,13 @@ public class PinballScript : MonoBehaviour
 
         // Return Level Movement.
         LevelMovement.LevelSpeed = tempLevelSpeed;
+    }
+
+    public void PlayGateSFX()
+    {
+        audioSource.pitch = Random.Range(0.7f, 1);
+        audioSource.clip = gateSFX;
+        audioSource.Play();
     }
 }
 

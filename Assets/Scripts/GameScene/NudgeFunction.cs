@@ -33,7 +33,7 @@ public class NudgeFunction : MonoBehaviour
         Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         
         // If the player uses the directional keys to perform a nudge, and the ability is active...
-        if(inputDir != Vector2.zero && canUse)
+        if(inputDir != Vector2.zero && canUse && IsInsideLevel())
         {
             canUse = false; // Disable ability, enabling a cooldown.
             pinballScript.ExitGateMovement(); // If the ball is currently riding a gate, exit the gate!
@@ -86,5 +86,17 @@ public class NudgeFunction : MonoBehaviour
         audioSource.Play();
         
         cooldownReset = true; // This increases the current cooldown time back to max cooldown time, over time.
+    }
+
+    public bool IsInsideLevel()
+    {
+        if(transform.position.x > -15.75 && transform.position.x < 15.75)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

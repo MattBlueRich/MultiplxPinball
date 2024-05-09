@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f339ae616827443bc0e6b3f000f9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: -10000
+  torque: -5000
   isLeft: 0
 --- !u!61 &50304330
 BoxCollider2D:
@@ -2897,6 +2897,66 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d18e2545f48f5894fa62e09b6c7c5000, type: 3}
+--- !u!1001 &306797059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091074671514313300, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749677459899910264, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      propertyPath: m_Name
+      value: Bumper
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7749677459899910264, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 2028973754}
+  m_SourcePrefab: {fileID: 100100000, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
 --- !u!1001 &310795273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20436,6 +20496,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d18e2545f48f5894fa62e09b6c7c5000, type: 3}
+--- !u!1 &2028973746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749677459899910264, guid: 09cfacc5cc0b45a4696d1cf65fb40c5b, type: 3}
+  m_PrefabInstance: {fileID: 306797059}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2028973754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028973746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee63a010fd57fb45bd7316a0d44dcd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2039358125
 GameObject:
   m_ObjectHideFlags: 0
@@ -20727,6 +20804,7 @@ MonoBehaviour:
   managerLowPassFilter: {fileID: 1086631123}
   tilemapFocus: {fileID: 486556611}
   gateParticles: {fileID: 811494915}
+  gateSFX: {fileID: 8300000, guid: a4f6756af998ec1419a4335b55dd50c8, type: 3}
 --- !u!82 &2039358131
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21239,7 +21317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f339ae616827443bc0e6b3f000f9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: 10000
+  torque: 5000
   isLeft: 1
 --- !u!61 &2055625274
 BoxCollider2D:
@@ -23013,7 +23091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6318383235371188051, guid: 8bfe6892af24fea46ae41b255f1d1e1a, type: 3}
       propertyPath: m_Mass
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6318383235371188051, guid: 8bfe6892af24fea46ae41b255f1d1e1a, type: 3}
       propertyPath: m_Constraints
@@ -23041,7 +23119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7853818834120599078, guid: 8bfe6892af24fea46ae41b255f1d1e1a, type: 3}
       propertyPath: m_Mass
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7853818834120599078, guid: 8bfe6892af24fea46ae41b255f1d1e1a, type: 3}
       propertyPath: m_Constraints
@@ -23315,6 +23393,7 @@ SceneRoots:
   - {fileID: 357032513}
   - {fileID: 3766730822325996102}
   - {fileID: 2059719159}
+  - {fileID: 306797059}
   - {fileID: 542011768}
   - {fileID: 1720424046}
   - {fileID: 773400549}
