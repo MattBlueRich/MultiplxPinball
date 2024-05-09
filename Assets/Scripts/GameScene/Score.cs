@@ -31,7 +31,7 @@ public class Score : MonoBehaviour
     {
         score = startingScore;
         _score = score;
-        scoreText.text = score.ToString("F0");
+        scoreText.text = "" + score.ToString("0000000000");
     }
 
     private void Update()
@@ -41,13 +41,13 @@ public class Score : MonoBehaviour
         {
             tickScore = true;
             _score += Time.deltaTime * 150f;
-            scoreText.text = _score.ToString("F0");
+            scoreText.text = "" + _score.ToString("0000000000");
         }
         else if(tickScore)
         {
             tickScore = false;
             _score = score;
-            scoreText.text = _score.ToString("F0");
+            scoreText.text = "" +_score.ToString("0000000000");
         }
 
         // While inside a gate, this if-statement increments the score.

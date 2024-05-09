@@ -193,6 +193,7 @@ public class PinballScript : MonoBehaviour
     public void PlayGateSFX()
     {
         audioSource.pitch = Random.Range(0.7f, 1);
+        audioSource.volume = .3f;
         audioSource.clip = gateSFX;
         audioSource.Play();
     }
