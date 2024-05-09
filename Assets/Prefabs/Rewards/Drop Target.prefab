@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 8127871332719820434}
   - component: {fileID: 3104664620835758973}
   - component: {fileID: 1126159323469309441}
-  - component: {fileID: 1667103366502007020}
   - component: {fileID: 3650665127627751774}
   m_Layer: 0
   m_Name: Drop Target
@@ -247,21 +246,6 @@ CircleCollider2D:
   m_Offset: {x: 1, y: 0}
   serializedVersion: 2
   m_Radius: 0.75
---- !u!114 &1667103366502007020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3022892190577542036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2254505a2b61c7e41bde3995c99ff15b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxY: {x: 0, y: 0, z: 0}
-  minY: {x: 0, y: 0.5, z: 0}
-  slowness: 0.5
 --- !u!82 &3650665127627751774
 AudioSource:
   m_ObjectHideFlags: 0
