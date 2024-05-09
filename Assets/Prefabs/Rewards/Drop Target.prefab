@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5987891852962857222}
   - component: {fileID: 1012062414425702279}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tendrils
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3104664620835758973}
   - component: {fileID: 1126159323469309441}
   - component: {fileID: 3650665127627751774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drop Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2947560048369780136}
   - component: {fileID: 2217564881926371124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Squid Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1586374976724325705}
   - component: {fileID: 7542096991914102064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6285381077091088000}
   - component: {fileID: 2817861477481752901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
