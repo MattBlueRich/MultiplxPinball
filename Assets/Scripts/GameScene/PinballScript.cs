@@ -33,6 +33,9 @@ public class PinballScript : MonoBehaviour
     [Header("Other")]
     public TilemapFocus tilemapFocus;
 
+    public ParticleSystem gateParticles;
+    bool showingParticles = false;
+
     void Start()
     {
         // StringToHash() saves memory on the Animator's parameters.
@@ -45,7 +48,7 @@ public class PinballScript : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
 
         // Reset music effects.
-        managerLowPassFilter.enabled = false; 
+        managerLowPassFilter.enabled = false;
     }
 
     void Update()
@@ -74,8 +77,16 @@ public class PinballScript : MonoBehaviour
         // If the ball enters the gate...
         if (usingGate)
         {
+            if (!showingParticles)
+            {
+                showingParticles = true;
+                gateParticles.gameObject.SetActive(true);
+            }
+
+            gateParticles.transform.position = transform.position;
+            
             // If the ball hasn't reached the last point on the gate...
-            if(nextPoint < gateWaypoints.Length)
+            if (nextPoint < gateWaypoints.Length)
             {
                 // If the ball hasn't reached its current point...
                 if (transform.position != gateWaypoints[nextPoint].position)
@@ -116,6 +127,15 @@ public class PinballScript : MonoBehaviour
                 // Return Level Movement.
                 LevelMovement.LevelSpeed = tempLevelSpeed;
             }
+        }
+        else
+        {
+            if (showingParticles)
+            {
+                showingParticles = false;
+                
+                gateParticles.gameObject.SetActive(false);
+            }     
         }
         #endregion
     }
