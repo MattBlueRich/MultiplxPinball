@@ -42,7 +42,7 @@ public class RewardScript : MonoBehaviour
     private AudioSource audioSource;
     
     private Object explosionRef;
-    private bool disabled = false;  
+    [HideInInspector] public bool disabled = false;  
     private void Start()
     {
         // In order to access the Score Manager, and make this object a prefab, we must get access to it via this method:

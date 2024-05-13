@@ -15,9 +15,12 @@ public class NudgeFunction : MonoBehaviour
     public AudioClip nudgeSFX;
     AudioSource audioSource;
 
+    public TrailRenderer trailRenderer;
+
     bool cooldownReset = false;
 
     PinballScript pinballScript;
+
     private void Start()
     {
         currentCooldownTime = cooldownMaxDuration;
@@ -25,6 +28,8 @@ public class NudgeFunction : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         pinballScript = GetComponent<PinballScript>();
+
+        trailRenderer.emitting = false;
     }
 
     // Update is called once per frame
@@ -36,6 +41,8 @@ public class NudgeFunction : MonoBehaviour
         if(inputDir != Vector2.zero && canUse && IsInsideLevel())
         {
             canUse = false; // Disable ability, enabling a cooldown.
+            trailRenderer.emitting = true;
+            StartCoroutine(trailTime());
             pinballScript.ExitGateMovement(); // If the ball is currently riding a gate, exit the gate!
             UseNudge(inputDir); // Nudge the pinball in the input direction.
         }
@@ -98,5 +105,11 @@ public class NudgeFunction : MonoBehaviour
         {
             return false;
         }
+    }
+
+    IEnumerator trailTime()
+    {
+        yield return new WaitForSeconds(.5f);
+        trailRenderer.emitting = false;
     }
 }

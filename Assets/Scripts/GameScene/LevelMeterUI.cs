@@ -22,7 +22,5 @@ public class LevelMeterUI : MonoBehaviour
         float heightValue = pinball.transform.position.y / maxHeight;
 
         slider.value = heightValue;
-
-        Debug.Log(slider.value);
     }
 }
