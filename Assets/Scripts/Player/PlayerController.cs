@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     bool GetInput()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetButton("Shoot All"))
         {
             return true;
         }
@@ -34,11 +34,11 @@ public class PlayerController : MonoBehaviour
         {
             if (isLeft)
             {
-                return Input.GetKey(KeyCode.LeftControl);
+                return Input.GetKey(KeyCode.LeftControl) || Input.GetButton("Left Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) < 0;
             }
             else
             {
-                return Input.GetKey(KeyCode.RightControl);
+                return Input.GetKey(KeyCode.RightControl) || Input.GetButton("Right Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) > 0;
             }
         }
     }
