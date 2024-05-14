@@ -32,7 +32,7 @@ public class StartManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !startGame)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Shoot All") && !startGame)
         {
             startGame = true;
             LevelMovement.LevelSpeed = 1.0f;
