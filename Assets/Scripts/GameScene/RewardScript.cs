@@ -9,7 +9,8 @@ public enum targetType
     DropTarget,
     SkillShotTarget,
     SuddenSpecialTarget,
-    JackpotLetter
+    JackpotLetter,
+    MysteryGift
 }
 
 public class RewardScript : MonoBehaviour
@@ -63,7 +64,8 @@ public class RewardScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pinball") && !disabled)
         {
-            score.AddScore(scoreValue);
+            // Adds score (if double points is enabled, this is factored by a multiplier).
+            score.AddScore(scoreValue * StatusManager.multiplier);
             PlayRandomSFX("score");
 
             switch (type)
@@ -88,6 +90,7 @@ public class RewardScript : MonoBehaviour
                 case targetType.SkillShotTarget:
                     KillTarget();
                     break;
+
                 case targetType.JackpotLetter:
                     score.AddLetter(jackpotLetter);
                     KillTarget();
@@ -98,6 +101,12 @@ public class RewardScript : MonoBehaviour
                     collision.gameObject.GetComponent<Rigidbody2D>().AddForce(bumperDirection * -bumperForce, ForceMode2D.Impulse);
                     PlayExplosion();
                     StartCoroutine(PlayBumperAnimation());
+                    break;
+
+                case targetType.MysteryGift:
+                    Debug.Log("gift");
+                    WheelUI.onSpinWheel(); // This action in WheelUI spins the wheel and picks a status effect.
+                    KillTarget();
                     break;
             }
         }

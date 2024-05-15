@@ -40,7 +40,7 @@ public class Score : MonoBehaviour
         if(_score < score)
         {
             tickScore = true;
-            _score += Time.deltaTime * 150f;
+            _score += Time.deltaTime * 750f;
             scoreText.text = "" + _score.ToString("0000000000");
         }
         else if(tickScore)
