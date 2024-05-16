@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5063753791165491129}
   - component: {fileID: -6437434315281363713}
   m_Layer: 6
-  m_Name: MaxLevel
+  m_Name: BrenMedInProg
   m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
