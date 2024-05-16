@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseUI;
     public GameObject cautionUI;
 
+    public AudioLowPassFilter musicFilter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +27,13 @@ public class PauseMenu : MonoBehaviour
                 pauseUI.SetActive(false);
                 cautionUI.SetActive(false);
                 Time.timeScale = 1.0f;
+                musicFilter.enabled = false;
             }
             else
             {
                 pauseUI.SetActive(true);
                 Time.timeScale = 0.0f;
+                musicFilter.enabled = true;
             }                      
         }
     }
@@ -49,5 +53,6 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(false);
         cautionUI.SetActive(false);
         Time.timeScale = 1.0f;
+        musicFilter.enabled = false;
     }
 }
