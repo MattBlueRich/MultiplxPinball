@@ -20,7 +20,7 @@ public class PinballScript : MonoBehaviour
 
     // Gate Variables
     private Transform[] gateWaypoints;
-    [HideInInspector] public bool usingGate = false;
+    public bool usingGate = false;
     private int nextPoint = 0;
     private float gateSpeed;
     private Vector2 gateEndForce;
@@ -188,6 +188,8 @@ public class PinballScript : MonoBehaviour
 
         // Return Level Movement.
         LevelMovement.LevelSpeed = tempLevelSpeed;
+
+        Debug.Log("Exited");
     }
 
     public void PlayGateSFX()

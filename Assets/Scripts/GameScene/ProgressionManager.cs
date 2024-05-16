@@ -17,7 +17,7 @@ public class ProgressionManager : MonoBehaviour
     private float currentTime;
 
     [Header("Level Selection Progression")]
-    public difficulties difficulty;
+    public static difficulties difficulty;
     public float easyLevelDuration;
     public float mediumLevelDuration;
 

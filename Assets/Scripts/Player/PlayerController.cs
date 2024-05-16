@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float torque;
     [SerializeField] bool isLeft;
 
+    public PinballScript pinballScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetInput())
+        if(!pinballScript.usingGate)
         {
-            rb.AddTorque(torque, ForceMode2D.Force);                           
+            if (GetInput())
+            {
+                rb.AddTorque(torque, ForceMode2D.Force);
+            }
         }
     }
 
