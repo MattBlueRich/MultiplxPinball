@@ -35,7 +35,7 @@ public class ObjectShake : MonoBehaviour
         bool reached = false;
 
         // Update our progress to our destination
-        progress += speed * Time.deltaTime;
+        progress += speed * Time.fixedDeltaTime; 
 
         // Check for the case when we overshoot or reach our destination
         if (progress >= 1.0f)
