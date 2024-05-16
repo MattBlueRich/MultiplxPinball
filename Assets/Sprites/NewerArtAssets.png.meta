@@ -724,7 +724,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewerArtAssets_38
+      name: Box
       rect:
         serializedVersion: 2
         x: 0
@@ -745,7 +745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewerArtAssets_40
+      name: Box-2
       rect:
         serializedVersion: 2
         x: 16
@@ -766,7 +766,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewerArtAssets_42
+      name: Box-3
       rect:
         serializedVersion: 2
         x: 32
@@ -787,7 +787,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewerArtAssets_44
+      name: Box-4
       rect:
         serializedVersion: 2
         x: 48
@@ -808,7 +808,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewerArtAssets_46
+      name: Box-5
       rect:
         serializedVersion: 2
         x: 64
@@ -965,6 +965,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Box: 2061369528
+      Box-2: -1059086328
+      Box-3: 2033120061
+      Box-4: -967372100
+      Box-5: -2063313993
       NewerArtAssets_0: 1003439815
       NewerArtAssets_1: 419090710
       NewerArtAssets_10: -603838609
@@ -997,16 +1002,11 @@ TextureImporter:
       NewerArtAssets_35: 1049080815
       NewerArtAssets_36: -696337835
       NewerArtAssets_37: -1664335446
-      NewerArtAssets_38: 2061369528
       NewerArtAssets_39: -905393894
       NewerArtAssets_4: 825063180
-      NewerArtAssets_40: -1059086328
       NewerArtAssets_41: -1043067332
-      NewerArtAssets_42: 2033120061
       NewerArtAssets_43: -120760337
-      NewerArtAssets_44: -967372100
       NewerArtAssets_45: -2056242882
-      NewerArtAssets_46: -2063313993
       NewerArtAssets_47: -1074440639
       NewerArtAssets_48: -593972314
       NewerArtAssets_49: 265815471

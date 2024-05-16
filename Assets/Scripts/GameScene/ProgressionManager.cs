@@ -37,7 +37,6 @@ public class ProgressionManager : MonoBehaviour
         {
             // This increments the speed of the level movement over time by a factor.
             LevelMovement.LevelSpeed += Time.deltaTime * levelSpeedFactor;
-            Debug.Log(LevelMovement.LevelSpeed);
             currentTime += Time.deltaTime;
 
             // This switch-statment changes the difficulty over time.

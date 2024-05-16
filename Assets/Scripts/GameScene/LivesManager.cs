@@ -73,7 +73,7 @@ public class LivesManager : MonoBehaviour
         // This is used to skip the transition for reloading the scene.
         if (transitioning)
         {
-            if(Input.GetKeyDown(KeyCode.Space)) 
+            if(Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Shoot All")) 
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
