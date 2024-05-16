@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4140486097753832891}
   - component: {fileID: 8501936093274914621}
   m_Layer: 6
-  m_Name: Empty Level Template 2
+  m_Name: MediumLevel1
   m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

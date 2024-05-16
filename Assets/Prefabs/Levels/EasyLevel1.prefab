@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7231810010218242542}
   - component: {fileID: -3240125211429233347}
   m_Layer: 6
-  m_Name: Empty Level Template 1
+  m_Name: EasyLevel1
   m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
