@@ -257,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: -5000
   isLeft: 0
+  pinballScript: {fileID: 2039358130}
 --- !u!61 &50304330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6631,7 +6632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &542011766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6829,81 +6830,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1781504956925950496, guid: d18e2545f48f5894fa62e09b6c7c5000, type: 3}
   m_PrefabInstance: {fileID: 397008575}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &562818745
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 562818746}
-  - component: {fileID: 562818748}
-  - component: {fileID: 562818747}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &562818746
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562818745}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1724332842}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &562818747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562818745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &562818748
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562818745}
-  m_CullTransparentMesh: 1
 --- !u!1001 &564439096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12890,6 +12816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: -10000
   isLeft: 0
+  pinballScript: {fileID: 2039358130}
 --- !u!1001 &1049936350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19583,7 +19510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1637941617
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20452,14 +20379,13 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2128621149}
-  - {fileID: 562818746}
   - {fileID: 1701976507}
   - {fileID: 656151276}
   m_Father: {fileID: 2138573399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: -30}
+  m_AnchoredPosition: {x: -160.9, y: -30}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1724332843
@@ -23169,7 +23095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.07058824, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -24336,6 +24262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: 5000
   isLeft: 1
+  pinballScript: {fileID: 2039358130}
 --- !u!61 &2055625274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25704,8 +25631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 0, y: 0.25}
-  m_AnchoredPosition: {x: 59.75598, y: -238.41473}
-  m_SizeDelta: {x: 256, y: 192}
+  m_AnchoredPosition: {x: 96.63, y: 5.07}
+  m_SizeDelta: {x: 24, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128621150
 MonoBehaviour:
@@ -25720,14 +25647,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 953138d627da1784fb42be6b2bdcc1cc, type: 3}
+  m_Sprite: {fileID: 656295952, guid: 997c94e268f2f6645a72f5ea68da6ac5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26499,6 +26426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: 10000
   isLeft: 1
+  pinballScript: {fileID: 2039358130}
 --- !u!114 &3766730822325996117
 MonoBehaviour:
   m_ObjectHideFlags: 0

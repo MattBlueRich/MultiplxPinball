@@ -257,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: -5000
   isLeft: 0
+  pinballScript: {fileID: 0}
 --- !u!61 &50304330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2896,7 +2897,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelSpeedFactor: 0.05
   maxLevelSpeed: 17
-  difficulty: 0
   easyLevelDuration: 30
   mediumLevelDuration: 30
   pinballScript: {fileID: 2039358130}
@@ -12036,6 +12036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: -10000
   isLeft: 0
+  pinballScript: {fileID: 0}
 --- !u!1001 &1049936350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22534,6 +22535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: 5000
   isLeft: 1
+  pinballScript: {fileID: 0}
 --- !u!61 &2055625274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22776,11 +22778,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1c5970b8d2a6a47b183c8530ccd98a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Levels:
-  - {fileID: 6514681569788432065, guid: 77031ca69a9df2045898c22b9456a609, type: 3}
-  - {fileID: 6514681569788432065, guid: 38ce78b49d8fded4c9a7668087146bf9, type: 3}
-  - {fileID: 6514681569788432065, guid: 9743ef5a55edfd64aaabb90675cb50b3, type: 3}
-  - {fileID: 6514681569788432065, guid: 3b95e98649d1aa44f8b94b838e412b3b, type: 3}
+  EasyLevels: []
+  MediumLevels: []
+  HardLevels: []
   spawnheight: 73
   gridParent: {fileID: 486556608}
 --- !u!61 &2059719157
@@ -24658,6 +24658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: 10000
   isLeft: 1
+  pinballScript: {fileID: 0}
 --- !u!114 &3766730822325996117
 MonoBehaviour:
   m_ObjectHideFlags: 0
