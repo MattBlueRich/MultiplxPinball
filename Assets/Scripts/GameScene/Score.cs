@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
     [Header("Jackpot Letters")]
     public List<char> jackpotLetters = new List<char>() { 'M', 'U', 'L', 'T', 'I', 'P', 'L', 'X', };
     public List<char> jackpotLettersRemaining;
-
+    public JackpotLetterUI jackpotLetterUI;
     
     [Header("Gate Movement Detection")]
     public PinballScript pinballScript;
@@ -69,6 +69,7 @@ public class Score : MonoBehaviour
         if (jackpotLettersRemaining.Contains(letter))
         {
             jackpotLettersRemaining.Remove(letter);
+            jackpotLetterUI.UpdateUI(letter); // This updates the jackpot letter UI.
         }
         else
         {
@@ -80,6 +81,7 @@ public class Score : MonoBehaviour
         {
             AddScore(1500); // Award jackpot value.
             jackpotLettersRemaining = jackpotLetters;
+            jackpotLetterUI.ResetUI(); // This resets the jackpot letter UI.
         }
     }
 
