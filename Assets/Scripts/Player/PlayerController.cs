@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool isLeft;
 
     public PinballScript pinballScript;
+    public Animator swishEffect;
+    float animationDelay = .2f;
+    bool canAnimate = true;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,42 @@ public class PlayerController : MonoBehaviour
             if (GetInput())
             {
                 rb.AddTorque(torque, ForceMode2D.Force);
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Shoot All"))
+            {
+                if (canAnimate)
+                {
+                    swishEffect.SetTrigger("Flip");
+                    canAnimate = false;
+                    StartCoroutine(swishDelay());
+                }
+            }
+
+            if (isLeft)
+            {
+                if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Left Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) < 0)
+                {
+                    if (canAnimate)
+                    {
+                        swishEffect.SetTrigger("Flip");
+                        canAnimate = false;
+                        StartCoroutine(swishDelay());
+                    }
+                }
+            }
+            else
+            {
+                if(Input.GetKeyDown(KeyCode.RightControl) || Input.GetButtonDown("Right Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) > 0)
+                {
+                    if (canAnimate)
+                    {
+                        swishEffect.SetTrigger("Flip");
+                        canAnimate = false;
+                        StartCoroutine(swishDelay());
+                    }
+                }
             }
         }
     }
@@ -46,5 +85,11 @@ public class PlayerController : MonoBehaviour
                 return Input.GetKey(KeyCode.RightControl) || Input.GetButton("Right Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) > 0;
             }
         }
+    }
+
+    IEnumerator swishDelay()
+    {
+        yield return new WaitForSeconds(animationDelay);
+        canAnimate = true;
     }
 }
