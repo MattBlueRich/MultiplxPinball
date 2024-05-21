@@ -13,10 +13,19 @@ public class PlayerController : MonoBehaviour
     float animationDelay = .2f;
     bool canAnimate = true;
 
+    public AudioClip[] flipperSFXS;
+    AudioSource audioSource;
+    public bool canPlayAudio;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        if (canPlayAudio)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }      
     }
 
     // Update is called once per frame
@@ -27,7 +36,6 @@ public class PlayerController : MonoBehaviour
             if (GetInput())
             {
                 rb.AddTorque(torque, ForceMode2D.Force);
-
             }
 
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Shoot All"))
@@ -38,6 +46,10 @@ public class PlayerController : MonoBehaviour
                     canAnimate = false;
                     StartCoroutine(swishDelay());
                 }
+                if (canPlayAudio)
+                {
+                    PlayRandomSFX();
+                }      
             }
 
             if (isLeft)
@@ -50,6 +62,10 @@ public class PlayerController : MonoBehaviour
                         canAnimate = false;
                         StartCoroutine(swishDelay());
                     }
+                    if (canPlayAudio)
+                    {
+                        PlayRandomSFX();
+                    }
                 }
             }
             else
@@ -61,6 +77,10 @@ public class PlayerController : MonoBehaviour
                         swishEffect.SetTrigger("Flip");
                         canAnimate = false;
                         StartCoroutine(swishDelay());
+                    }
+                    if (canPlayAudio)
+                    {
+                        PlayRandomSFX();
                     }
                 }
             }
@@ -91,5 +111,12 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(animationDelay);
         canAnimate = true;
+    }
+
+    public void PlayRandomSFX()
+    {
+        audioSource.pitch = Random.Range(0.7f, 1f);
+        audioSource.clip = flipperSFXS[Random.Range(0, flipperSFXS.Length)];
+        audioSource.Play();
     }
 }
