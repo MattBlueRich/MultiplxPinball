@@ -21,10 +21,15 @@ public class NudgeUI : MonoBehaviour
     private float strobeCurrentTime;
     private bool isFull = false;
 
+    public GameObject tutorialTip;
+    bool showTip = true;
+    bool hideTip = false;
+
     // Start is called before the first frame update
     void Start()
     {
         strobeMaterial.color = strobeColourA;
+        tutorialTip.SetActive(false);
     }
 
     // Update is called once per frame
@@ -50,12 +55,24 @@ public class NudgeUI : MonoBehaviour
                 strobeCurrentTime = strobeDelay; // Reset current time back to max delay time. 
                 UpdateMaterialColour(); // Change the material colour between colour A and colour B.
             }
+
+            if (!showTip && !hideTip)
+            {
+                hideTip = true;
+                tutorialTip.GetComponent<Animator>().SetTrigger("Exit");
+            }
         }
         // If the ability has successfully cooled down...
         else if(!isFull)
         {
             isFull = true; // This bool ensures this code is ran once.
             strobeMaterial.color = completedFillColour; // Set material colour to completed fill colour.
+
+            if (showTip)
+            {
+                tutorialTip.SetActive(true);
+                showTip = false;
+            }
         }
     }
 
