@@ -29,16 +29,36 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(!pinballScript.usingGate)
+        if (!pinballScript.usingGate)
         {
             if (GetInput())
             {
                 rb.AddTorque(torque, ForceMode2D.Force);
             }
+        }
+    }
 
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Shoot All"))
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Shoot All"))
+        {
+            if (canAnimate)
+            {
+                swishEffect.SetTrigger("Flip");
+                canAnimate = false;
+                StartCoroutine(swishDelay());
+            }
+            if (canPlayAudio)
+            {
+                PlayRandomSFX();
+            }
+        }
+
+        if (isLeft)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Left Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) == -1)
             {
                 if (canAnimate)
                 {
@@ -49,39 +69,22 @@ public class PlayerController : MonoBehaviour
                 if (canPlayAudio)
                 {
                     PlayRandomSFX();
-                }      
-            }
-
-            if (isLeft)
-            {
-                if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Left Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) < 0)
-                {
-                    if (canAnimate)
-                    {
-                        swishEffect.SetTrigger("Flip");
-                        canAnimate = false;
-                        StartCoroutine(swishDelay());
-                    }
-                    if (canPlayAudio)
-                    {
-                        PlayRandomSFX();
-                    }
                 }
             }
-            else
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.RightControl) || Input.GetButtonDown("Right Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) == 1)
             {
-                if(Input.GetKeyDown(KeyCode.RightControl) || Input.GetButtonDown("Right Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) > 0)
+                if (canAnimate)
                 {
-                    if (canAnimate)
-                    {
-                        swishEffect.SetTrigger("Flip");
-                        canAnimate = false;
-                        StartCoroutine(swishDelay());
-                    }
-                    if (canPlayAudio)
-                    {
-                        PlayRandomSFX();
-                    }
+                    swishEffect.SetTrigger("Flip");
+                    canAnimate = false;
+                    StartCoroutine(swishDelay());
+                }
+                if (canPlayAudio)
+                {
+                    PlayRandomSFX();
                 }
             }
         }

@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f339ae616827443bc0e6b3f000f9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: -5000
+  torque: -100000
   isLeft: 0
   pinballScript: {fileID: 2039358130}
   swishEffect: {fileID: 965310261}
@@ -6801,7 +6801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &542011766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13526,7 +13526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f339ae616827443bc0e6b3f000f9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: -10000
+  torque: -100000
   isLeft: 0
   pinballScript: {fileID: 2039358130}
   swishEffect: {fileID: 451351886}
@@ -25425,7 +25425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f339ae616827443bc0e6b3f000f9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: 5000
+  torque: 100000
   isLeft: 1
   pinballScript: {fileID: 2039358130}
   swishEffect: {fileID: 506533474}
@@ -27547,7 +27547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f339ae616827443bc0e6b3f000f9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: 10000
+  torque: 100000
   isLeft: 1
   pinballScript: {fileID: 2039358130}
   swishEffect: {fileID: 2014252948}
