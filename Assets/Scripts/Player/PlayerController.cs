@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     AudioSource audioSource;
     public bool canPlayAudio;
 
+    bool triggerDown = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,33 +62,48 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetButtonDown("Left Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) == -1)
             {
-                if (canAnimate)
+                if (!triggerDown)
                 {
-                    swishEffect.SetTrigger("Flip");
-                    canAnimate = false;
-                    StartCoroutine(swishDelay());
-                }
-                if (canPlayAudio)
-                {
-                    PlayRandomSFX();
-                }
+                    triggerDown = true;
+
+                    if (canAnimate)
+                    {
+                        swishEffect.SetTrigger("Flip");
+                        canAnimate = false;
+                        StartCoroutine(swishDelay());
+                    }
+                    if (canPlayAudio)
+                    {
+                        PlayRandomSFX();
+                    }
+                }               
             }
         }
         else
         {
             if (Input.GetKeyDown(KeyCode.RightControl) || Input.GetButtonDown("Right Shoot") || Mathf.Round(Input.GetAxisRaw("Triggers")) == 1)
             {
-                if (canAnimate)
+                if (!triggerDown)
                 {
-                    swishEffect.SetTrigger("Flip");
-                    canAnimate = false;
-                    StartCoroutine(swishDelay());
-                }
-                if (canPlayAudio)
-                {
-                    PlayRandomSFX();
-                }
+                    triggerDown = true;
+
+                    if (canAnimate)
+                    {
+                        swishEffect.SetTrigger("Flip");
+                        canAnimate = false;
+                        StartCoroutine(swishDelay());
+                    }
+                    if (canPlayAudio)
+                    {
+                        PlayRandomSFX();
+                    }
+                }                
             }
+        }
+
+        if(Mathf.Round(Input.GetAxisRaw("Triggers")) == 0)
+        {
+            triggerDown = false;
         }
     }
 
