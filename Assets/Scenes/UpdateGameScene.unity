@@ -5649,6 +5649,7 @@ GameObject:
   - component: {fileID: 451351885}
   - component: {fileID: 451351887}
   - component: {fileID: 451351886}
+  - component: {fileID: 451351888}
   m_Layer: 0
   m_Name: Flipper Swish Effect
   m_TagString: Untagged
@@ -5744,6 +5745,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &451351888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451351884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94f956081115d641899083005297dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.3
+  speed: 50
 --- !u!1001 &459550736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12062,6 +12077,7 @@ GameObject:
   - component: {fileID: 965310260}
   - component: {fileID: 965310262}
   - component: {fileID: 965310261}
+  - component: {fileID: 965310263}
   m_Layer: 0
   m_Name: Flipper Swish Effect (1)
   m_TagString: Untagged
@@ -12157,6 +12173,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &965310263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965310259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94f956081115d641899083005297dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.3
+  speed: 50
 --- !u!1001 &966128670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24206,6 +24236,7 @@ GameObject:
   - component: {fileID: 2014252950}
   - component: {fileID: 2014252949}
   - component: {fileID: 2014252948}
+  - component: {fileID: 2014252951}
   m_Layer: 0
   m_Name: Flipper Swish Effect
   m_TagString: Untagged
@@ -24301,6 +24332,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3766730822325996118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014252951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014252947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94f956081115d641899083005297dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.3
+  speed: 50
 --- !u!4 &2019105535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1781504956925950496, guid: d18e2545f48f5894fa62e09b6c7c5000, type: 3}
