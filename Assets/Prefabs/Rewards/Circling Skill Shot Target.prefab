@@ -184,6 +184,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6697585733260793294, guid: caedb435c172c4c49abcf978aa1d2239, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697585733260793294, guid: caedb435c172c4c49abcf978aa1d2239, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
       value: 1
       objectReference: {fileID: 0}
