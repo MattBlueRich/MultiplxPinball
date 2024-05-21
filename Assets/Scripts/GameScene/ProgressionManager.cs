@@ -24,6 +24,8 @@ public class ProgressionManager : MonoBehaviour
     [Header("Other")]
     public PinballScript pinballScript;
 
+    public AudioSource managerAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,7 @@ public class ProgressionManager : MonoBehaviour
                         Debug.Log("Switching difficulty to medium!");
                         currentTime = 0;
                         difficulty = difficulties.Medium;
+                        managerAudioSource.pitch += 0.1f;
                     }
                     break;
                 case difficulties.Medium:
@@ -56,6 +59,7 @@ public class ProgressionManager : MonoBehaviour
                         Debug.Log("Switching difficulty to hard!");
                         currentTime = 0;
                         difficulty = difficulties.Hard;
+                        managerAudioSource.pitch += 0.1f;
                     }
                     break;
             }
