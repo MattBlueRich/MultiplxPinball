@@ -8,6 +8,10 @@ TagManager:
   - ScoreManager
   - Level
   - Flipper
+  - LitStart
+  - LitLeaderboard
+  - LitCredits
+  - LitExit
   layers:
   - Default
   - TransparentFX
