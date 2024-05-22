@@ -3151,6 +3151,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 92591317559346045}
     m_Modifications:
+    - target: {fileID: 2868436202933743747, guid: 2e2a37949554ed448aa3fe8d3e27fce3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3022892190577542036, guid: 2e2a37949554ed448aa3fe8d3e27fce3, type: 3}
       propertyPath: m_Name
       value: Alien Drop Target (1)
@@ -3419,6 +3423,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 92591317559346045}
     m_Modifications:
+    - target: {fileID: 2868436202933743747, guid: 2e2a37949554ed448aa3fe8d3e27fce3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3022892190577542036, guid: 2e2a37949554ed448aa3fe8d3e27fce3, type: 3}
       propertyPath: m_Name
       value: Alien Drop Target (2)
@@ -5961,6 +5969,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 92591317559346045}
     m_Modifications:
+    - target: {fileID: 2868436202933743747, guid: 2e2a37949554ed448aa3fe8d3e27fce3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3022892190577542036, guid: 2e2a37949554ed448aa3fe8d3e27fce3, type: 3}
       propertyPath: m_Name
       value: Alien Drop Target
