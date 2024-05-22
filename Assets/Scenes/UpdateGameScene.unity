@@ -3049,7 +3049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddcc8b2d62c6dbb48b0a77000bfb8597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSpeedFactor: 0.5
+  levelSpeedFactor: 0.01
   maxLevelSpeed: 17
   easyLevelDuration: 45
   mediumLevelDuration: 30
