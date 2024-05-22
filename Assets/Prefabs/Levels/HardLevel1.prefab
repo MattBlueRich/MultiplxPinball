@@ -3805,6 +3805,7 @@ GameObject:
   - component: {fileID: 1012662822108308245}
   - component: {fileID: 8384516843102293590}
   - component: {fileID: 7008788243647732314}
+  - component: {fileID: 2408556335253477196}
   m_Layer: 6
   m_Name: Obstacles
   m_TagString: Untagged
@@ -5763,6 +5764,18 @@ PolygonCollider2D:
       - {x: -7.9487414, y: 40.938072}
       - {x: -5.9802933, y: 41.017605}
   m_UseDelaunayMesh: 0
+--- !u!114 &2408556335253477196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764776184029752077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72631fbd9518a0c42a4de0ba9f561d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8465428187077338900
 GameObject:
   m_ObjectHideFlags: 0
