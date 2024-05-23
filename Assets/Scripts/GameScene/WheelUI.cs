@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +40,9 @@ public class WheelUI : MonoBehaviour
     AudioSource audioSource;
     Animator animator;
 
+    public static Action onSpinWheel;
+    public StatusManager statusManager;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -48,8 +52,6 @@ public class WheelUI : MonoBehaviour
 
         TVScreenMaterial.color = luckyColour;
     }
-
-    [ContextMenu("Start Wheel")] // By right-clicking this script, this function can be called in the editor.
     public void StartWheel()
     {
         animator.SetBool("In", true);
@@ -62,7 +64,7 @@ public class WheelUI : MonoBehaviour
     {
         float startAngle = transform.eulerAngles.z;
         currentTime = 0;
-        int indexSegmentRandom = Random.Range(1, numberOfSegments); // This picks a random segment of the wheel to land on.
+        int indexSegmentRandom = UnityEngine.Random.Range(1, numberOfSegments); // This picks a random segment of the wheel to land on.
         IsLucky(indexSegmentRandom);
 
         float desiredAngle = (fullWheelRotations * CIRCLE) + angleOfOneSegment * indexSegmentRandom - startAngle;
@@ -76,11 +78,6 @@ public class WheelUI : MonoBehaviour
             wheel.transform.eulerAngles = new Vector3(0, 0, angleCurrent + startAngle);
         }
 
-        /*
-        Here is where we will pick from a list of different status effects, either good or bad depending on the bool isLucky.
-        We will probably set the status and cooldown of the status in another script!
-        */
-
         wheelStopped = true;
 
         if (isLucky)
@@ -91,7 +88,9 @@ public class WheelUI : MonoBehaviour
         {
             TVScreenMaterial.color = unluckyColour;
         }
-        
+
+        statusManager.AddStatusEffect(isLucky); // Start status effect.
+
         yield return new WaitForSeconds(1);
         HideWheel();
     }
@@ -109,7 +108,6 @@ public class WheelUI : MonoBehaviour
             return true;
         }
     }
-
     public void HideWheel() 
     {
         animator.SetBool("In", false);
@@ -131,7 +129,6 @@ public class WheelUI : MonoBehaviour
             }
         }
     }
-
     public void UpdateMaterialColour()
     {
         // If the material's current colour is colour A...
@@ -144,4 +141,15 @@ public class WheelUI : MonoBehaviour
             TVScreenMaterial.color = luckyColour; // Switch to colour A!
         }
     }
+
+    private void OnEnable()
+    {
+        onSpinWheel += StartWheel; // Adds function to the event, so that when the event is called, so is this function.
+    }
+
+    private void OnDisable()
+    {
+        onSpinWheel -= StartWheel; // Removes function to the event, so to avoid listening while the wheel is disabled.
+    }
 }
+

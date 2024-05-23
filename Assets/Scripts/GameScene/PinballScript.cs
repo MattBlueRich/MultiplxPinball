@@ -20,17 +20,23 @@ public class PinballScript : MonoBehaviour
 
     // Gate Variables
     private Transform[] gateWaypoints;
-    [HideInInspector] public bool usingGate = false;
+    public bool usingGate = false;
     private int nextPoint = 0;
     private float gateSpeed;
     private Vector2 gateEndForce;
     private CircleCollider2D circleCollider;
+    private float tempLevelSpeed = 1.0f;
 
     [Header("Music Manager Effects")]
     public AudioLowPassFilter managerLowPassFilter;
 
     [Header("Other")]
     public TilemapFocus tilemapFocus;
+
+    [Header("Gate Effects")]
+    public ParticleSystem gateParticles;
+    public AudioClip gateSFX;
+    bool showingParticles = false;
 
     void Start()
     {
@@ -73,8 +79,17 @@ public class PinballScript : MonoBehaviour
         // If the ball enters the gate...
         if (usingGate)
         {
+            if (!showingParticles)
+            {
+                showingParticles = true;
+                gateParticles.gameObject.SetActive(true);
+                InvokeRepeating("PlayGateSFX",0, .3f);
+            }
+
+            gateParticles.transform.position = transform.position;
+            
             // If the ball hasn't reached the last point on the gate...
-            if(nextPoint < gateWaypoints.Length)
+            if (nextPoint < gateWaypoints.Length)
             {
                 // If the ball hasn't reached its current point...
                 if (transform.position != gateWaypoints[nextPoint].position)
@@ -106,12 +121,25 @@ public class PinballScript : MonoBehaviour
                 // Throw the ball from the gate's exit.
                 rb.AddForce(gateEndForce * gateSpeed, ForceMode2D.Impulse);
 
-                // Focus tilemap
+                // Focus tilemap.
                 tilemapFocus.Focus();
 
                 // Unmuffle music.
                 managerLowPassFilter.enabled = false;
+
+                // Return Level Movement.
+                LevelMovement.LevelSpeed = tempLevelSpeed;
             }
+        }
+        else
+        {
+            if (showingParticles)
+            {
+                showingParticles = false;
+                
+                gateParticles.gameObject.SetActive(false);
+                CancelInvoke("PlayGateSFX");
+            }     
         }
         #endregion
     }
@@ -120,6 +148,7 @@ public class PinballScript : MonoBehaviour
     public void UseGateMovement(Transform[] waypoints, float speed, Vector2 endForce)
     {
         // Get variables.
+        tempLevelSpeed = LevelMovement.LevelSpeed;
         gateWaypoints = waypoints;
         gateSpeed = speed;
         gateEndForce = endForce;
@@ -129,6 +158,9 @@ public class PinballScript : MonoBehaviour
         rb.gravityScale = 0;
         nextPoint = 0;
         circleCollider.enabled = false;
+
+        // Bug fix: Stop all level movement.
+        LevelMovement.LevelSpeed = 0f;
 
         // Unfocus tilemap.
         tilemapFocus.Unfocus();
@@ -153,6 +185,21 @@ public class PinballScript : MonoBehaviour
 
         // Unmuffle music.
         managerLowPassFilter.enabled = false;
+
+        // Return Level Movement.
+        LevelMovement.LevelSpeed = tempLevelSpeed;
+
+        Debug.Log("Exited");
     }
 
+    public void PlayGateSFX()
+    {
+        audioSource.pitch = Random.Range(0.7f, 1);
+        audioSource.volume = .3f;
+        audioSource.clip = gateSFX;
+        audioSource.Play();
+    }
 }
+
+
+

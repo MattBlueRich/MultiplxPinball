@@ -18,6 +18,11 @@ public class StartManager : MonoBehaviour
     private bool startGame = false;
     private bool gameStarted = false;
 
+    private void Start()
+    {
+        LevelMovement.LevelSpeed = 0f;
+    }
+
     void FixedUpdate()
     {
         if (!startGame && !gameStarted)
@@ -27,11 +32,14 @@ public class StartManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !startGame)
+        if (!startGame)
         {
-            startGame = true;
-            LevelMovement.LevelSpeed = 1.0f;
-            UEGameStart.Invoke(); // Trigger public game start event.
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Shoot All"))
+            {
+                startGame = true;
+                LevelMovement.LevelSpeed = 1.0f;
+                UEGameStart.Invoke(); // Trigger public game start event.
+            }
         }
 
         if (startGame && !gameStarted)

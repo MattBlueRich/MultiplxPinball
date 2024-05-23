@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+guid: 95c105a57194c70448e927f6f2b09c23
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blowfish-Passive-1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68bf3dcc97e46b41ab39ab0aee67d2c
+      internalID: 1090333613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blowfish-Aggro-1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22edb2eb0682de45a58211559ae0af4
+      internalID: -365460068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blowfish-Stream-1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 40
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aaae0b721b76054cb1bf26bf26193fd
+      internalID: 904987770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blowfish-Passive-2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26fc1a036ccf434b898151ab07dea44
+      internalID: -1093477901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blowfish-Agro-2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91670e51b1e981b4aa0746ac3fb3ffaa
+      internalID: 2011096079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blowfish-Stream-2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 40
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73bf468752e78d44a42408a670ce0c7
+      internalID: -1018010423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blowfish-Stream-3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 40
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109e782f243f05645951bdc9d07be7d8
+      internalID: -1419606893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blowfish-Stream-4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 40
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73263391b4a11644389115168757c859
+      internalID: -835549601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blowfish Sheet_10: -1238063464
+      Blowfish Sheet_11: 70724821
+      Blowfish Sheet_12: -1465278813
+      Blowfish Sheet_13: 1097424597
+      Blowfish Sheet_14: -1813647213
+      Blowfish Sheet_15: -1160432970
+      Blowfish Sheet_16: 1122920739
+      Blowfish Sheet_17: -1967756790
+      Blowfish Sheet_18: 2002736223
+      Blowfish Sheet_19: -150469314
+      Blowfish Sheet_20: 2061623680
+      Blowfish Sheet_21: -586764100
+      Blowfish Sheet_22: 1552878371
+      Blowfish Sheet_23: -1826471644
+      Blowfish Sheet_24: -1603293925
+      Blowfish Sheet_25: -1671767284
+      Blowfish Sheet_26: 558272935
+      Blowfish Sheet_27: 781965560
+      Blowfish Sheet_28: 1383196046
+      Blowfish Sheet_29: 592804032
+      Blowfish Sheet_30: -2098155442
+      Blowfish Sheet_31: -1075990219
+      Blowfish Sheet_32: 921908907
+      Blowfish Sheet_33: -1335956310
+      Blowfish Sheet_34: 1308707946
+      Blowfish Sheet_35: 931168990
+      Blowfish Sheet_36: -631752302
+      Blowfish Sheet_37: -176361072
+      Blowfish Sheet_38: -259010418
+      Blowfish Sheet_39: 1311916846
+      Blowfish Sheet_41: -1825431573
+      Blowfish Sheet_42: 1131420197
+      Blowfish Sheet_43: 217749802
+      Blowfish Sheet_44: 1246894082
+      Blowfish Sheet_45: -568298546
+      Blowfish Sheet_46: -774042498
+      Blowfish Sheet_47: -1209209483
+      Blowfish Sheet_48: -374937810
+      Blowfish Sheet_49: 222629219
+      Blowfish Sheet_50: -2074267263
+      Blowfish Sheet_51: 162512126
+      Blowfish Sheet_52: -1391892640
+      Blowfish Sheet_53: 1640607581
+      Blowfish Sheet_54: -1851319628
+      Blowfish Sheet_55: -1743336438
+      Blowfish Sheet_56: -1764192163
+      Blowfish Sheet_57: 974226245
+      Blowfish Sheet_58: -1559801834
+      Blowfish Sheet_59: -884524894
+      Blowfish Sheet_7: -2059238803
+      Blowfish Sheet_8: -1750769897
+      Blowfish Sheet_9: -966779725
+      Blowfish-Aggro-1: -365460068
+      Blowfish-Agro-2: 2011096079
+      Blowfish-Passive-1: 1090333613
+      Blowfish-Passive-2: -1093477901
+      Blowfish-Stream-1: 904987770
+      Blowfish-Stream-2: -1018010423
+      Blowfish-Stream-3: -1419606893
+      Blowfish-Stream-4: -835549601
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
