@@ -17,7 +17,7 @@ public class MenuButton : MonoBehaviour
     }
     public void CreditButton()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("CreditScene");
     }
     public void ExitButton()
     {
