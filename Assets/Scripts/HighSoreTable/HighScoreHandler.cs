@@ -11,7 +11,7 @@ public class HighScoreHandler : MonoBehaviour
     public delegate void OnHighScoreListChanged(List<HighScorePart> list);
     public static event OnHighScoreListChanged onHighScoreListChanged;
 
-    private void start()
+    private void Start()
     {
         LoadHighScores();
     }
@@ -19,7 +19,7 @@ public class HighScoreHandler : MonoBehaviour
     {
         highscoreList = FileHandler.ReadListFromJSON<HighScorePart>(filename);
 
-        while highscoreList > MaxCount
+        while (highscoreList.Count > MaxCount)
         {
             hiscoreList.RemoveAt(MaxCount);
         }
@@ -32,7 +32,7 @@ public class HighScoreHandler : MonoBehaviour
 
     private void SaveHighScores()
     {
-        FileHandler.SaveToJSON<HighScorePart> (highscoreList, filename)
+        FileHandler.SaveToJSON<HighScorePart>(highscoreList, filename);
     }
 
     public void AddHighScoreIfPossible(HighScorePart ParentHighScore)
@@ -43,9 +43,9 @@ public class HighScoreHandler : MonoBehaviour
             {
                 highscoreList.Insert(i, HighSCorePart);
 
-                while highscoreList > MaxCount
+                while (highscoreList.Count > MaxCount)
                 {
-                    hiscoreList.RemoveAt(MaxCount);
+                    highscoreList.RemoveAt(MaxCount);
                 }
 
                 SaveHighScores();
