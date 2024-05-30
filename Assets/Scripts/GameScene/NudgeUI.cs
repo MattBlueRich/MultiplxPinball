@@ -29,7 +29,6 @@ public class NudgeUI : MonoBehaviour
     void Start()
     {
         strobeMaterial.color = strobeColourA;
-        tutorialTip.SetActive(false);
     }
 
     // Update is called once per frame
@@ -56,23 +55,20 @@ public class NudgeUI : MonoBehaviour
                 UpdateMaterialColour(); // Change the material colour between colour A and colour B.
             }
 
-            if (!showTip && !hideTip)
+            if (!showTip)
             {
-                hideTip = true;
-                tutorialTip.GetComponent<Animator>().SetTrigger("Exit");
+                showTip = true;
+                tutorialTip.GetComponent<Animator>().SetBool("In", false);
             }
         }
         // If the ability has successfully cooled down...
         else if(!isFull)
         {
             isFull = true; // This bool ensures this code is ran once.
+            showTip = false;
             strobeMaterial.color = completedFillColour; // Set material colour to completed fill colour.
 
-            if (showTip)
-            {
-                tutorialTip.SetActive(true);
-                showTip = false;
-            }
+            tutorialTip.GetComponent<Animator>().SetBool("In", true);
         }
     }
 

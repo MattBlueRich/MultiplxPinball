@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // [ This script is responsible for applying force to the pinball ("nudging" or "tilting"), when the ability is made availabe after a cooldown. ] //
 public class NudgeFunction : MonoBehaviour
@@ -97,7 +98,11 @@ public class NudgeFunction : MonoBehaviour
 
     public bool IsInsideLevel()
     {
-        if(transform.position.x > -15.75 && transform.position.x < 15.75)
+        if(SceneManager.GetActiveScene().name == "TutorialScene" || SceneManager.GetActiveScene().name == "CreditScene")
+        {
+            return true;
+        }
+        else if(transform.position.x > -15.75 && transform.position.x < 15.75)
         {
             return true;
         }

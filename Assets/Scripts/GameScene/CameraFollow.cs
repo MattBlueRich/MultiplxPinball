@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     [Tooltip("This is where the camera stops tracking the pinball's y-position!")]
     public float minY = -10f; // Stop tracking if the pinball falls below this y-position!
 
-    [SerializeField] private Transform target; // This is what the camera follows in the game scene.
+    public Transform target; // This is what the camera follows in the game scene.
 
     private bool trackTarget = true;
 
