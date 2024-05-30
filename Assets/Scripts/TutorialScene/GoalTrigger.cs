@@ -11,6 +11,8 @@ public class GoalTrigger : MonoBehaviour
     public Transform level2CamTransform;
     public float speed = 5;
     bool endMovement = false;
+    public GameObject pinball;
+    public Transform newLevelSpawn;
 
     private void Start()
     {
@@ -22,6 +24,7 @@ public class GoalTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("Pinball") && !goalReached)
         {
             goalReached = true;
+            pinball.transform.position = newLevelSpawn.transform.position;
         }
     }
 
@@ -29,14 +32,8 @@ public class GoalTrigger : MonoBehaviour
     {
         if(mainCamera.transform.position != level2CamTransform.position && goalReached && !endMovement) 
         {
-            /*
-            mainCamera.transform.position = Vector3.MoveTowards
-                (mainCamera.transform.position, level2CamTransform.position, speed * Time.deltaTime);
-            */
-
             mainCamera.transform.position = Vector3.Lerp
                 (mainCamera.transform.position, level2CamTransform.position, speed * Time.deltaTime);
-
         }
         else if(mainCamera.transform.position == level2CamTransform.position && !endMovement)
         {

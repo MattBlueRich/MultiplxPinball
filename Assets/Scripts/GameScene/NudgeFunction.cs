@@ -102,7 +102,8 @@ public class NudgeFunction : MonoBehaviour
         {
             return true;
         }
-        else if(transform.position.x > -15.75 && transform.position.x < 15.75)
+
+        if(transform.position.x > -15.75 && transform.position.x < 15.75)
         {
             return true;
         }

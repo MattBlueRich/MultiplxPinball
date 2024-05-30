@@ -9,12 +9,15 @@ public class PauseMenu : MonoBehaviour
     public GameObject cautionUI;
 
     public AudioLowPassFilter musicFilter;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         pauseUI.SetActive(false);
         cautionUI.SetActive(false);
+        Cursor.visible = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,12 +31,14 @@ public class PauseMenu : MonoBehaviour
                 cautionUI.SetActive(false);
                 Time.timeScale = 1.0f;
                 musicFilter.enabled = false;
+                Cursor.visible = false;
             }
             else
             {
                 pauseUI.SetActive(true);
                 Time.timeScale = 0.0f;
                 musicFilter.enabled = true;
+                Cursor.visible = true;
             }                      
         }
     }
@@ -47,6 +52,7 @@ public class PauseMenu : MonoBehaviour
     public void ExitToMenu()
     {
         Time.timeScale = 1.0f;
+        Cursor.visible = false;
         SceneManager.LoadScene("MenuScene");
     }
     public void ResumeGame()
@@ -55,5 +61,12 @@ public class PauseMenu : MonoBehaviour
         cautionUI.SetActive(false);
         Time.timeScale = 1.0f;
         musicFilter.enabled = false;
+        Cursor.visible = false;
+    }
+    public void PlayHoverSound(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.pitch = Random.Range(0.7f, 1.0f);
+        audioSource.Play();
     }
 }
