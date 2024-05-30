@@ -1924,7 +1924,7 @@ GameObject:
   - component: {fileID: 170657030}
   - component: {fileID: 170657029}
   m_Layer: 0
-  m_Name: Gift Manager
+  m_Name: Gift Manager (Currently Not Working)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1937,11 +1937,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170657028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ce0138196666d74c905d5fec54cf78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giftPrefab: {fileID: 6033974578392286821, guid: 5b290f564e7ceb246af54016a90a7c6a, type: 3}
+  maxSpawnTime: 0
+  minSpawnTime: 0
 --- !u!4 &170657030
 Transform:
   m_ObjectHideFlags: 0
