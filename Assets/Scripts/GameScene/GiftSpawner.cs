@@ -7,7 +7,6 @@ public class GiftSpawner : MonoBehaviour
     public GameObject giftPrefab;
     public float maxSpawnTime, minSpawnTime;
     private float randomTime;
-    bool isLeft = false;
 
     // Start is called before the first frame update
     void Start()

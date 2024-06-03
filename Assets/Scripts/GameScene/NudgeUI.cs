@@ -23,7 +23,6 @@ public class NudgeUI : MonoBehaviour
 
     public GameObject tutorialTip;
     bool showTip = true;
-    bool hideTip = false;
 
     // Start is called before the first frame update
     void Start()
