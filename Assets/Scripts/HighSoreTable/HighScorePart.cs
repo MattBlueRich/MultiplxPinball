@@ -6,11 +6,11 @@ public class HighScorePart
 {
     public string PlayerName;
 
-    public int Score;
+    public int points;
 
-    public HighScorePart (string name, int Score)
+    public HighScorePart (string name, int points)
     {
         PlayerName = name;
-        this.Score = Score;
+        this.points = points;
     }
 }
